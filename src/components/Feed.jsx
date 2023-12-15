@@ -13,7 +13,7 @@ const Feed = () => {
       <Sidebar/>
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
-          Copyright © 2023 Dontrell Dev
+          Copyright © 2024 Star Gazing
         </Typography>
       </Box>
 

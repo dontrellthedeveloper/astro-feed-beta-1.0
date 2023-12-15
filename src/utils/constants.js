@@ -12,26 +12,41 @@ import TheaterComedyIcon from '@mui/icons-material/TheaterComedy';
 import FitnessCenterIcon from '@mui/icons-material/FitnessCenter';
 import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
+import { TbZodiacCapricorn } from "react-icons/tb";
+import { TbZodiacAquarius } from "react-icons/tb";
+import { TbZodiacPisces } from "react-icons/tb";
+import { TbZodiacAries } from "react-icons/tb";
+import { TbZodiacTaurus } from "react-icons/tb";
+import { TbZodiacGemini } from "react-icons/tb";
+import { TbZodiacCancer } from "react-icons/tb";
+import { TbZodiacLeo } from "react-icons/tb";
+import { TbZodiacVirgo } from "react-icons/tb";
+import { TbZodiacLibra } from "react-icons/tb";
+import { TbZodiacScorpio } from "react-icons/tb";
+import { TbZodiacSagittarius } from "react-icons/tb";
+
 export const logo = 'https://i.ibb.co/s9Qys2j/logo.png';
 
 export const categories = [
-  { name: 'New', icon: <HomeIcon />, },
-  { name: 'JS Mastery', icon: <CodeIcon />, },
-  { name: 'Coding', icon: <CodeIcon />, },
-  { name: 'ReactJS', icon: <CodeIcon />, },
-  { name: 'NextJS', icon: <CodeIcon />, },
-  { name: 'Music', icon: <MusicNoteIcon /> },
-  { name: 'Education', icon: <SchoolIcon />, },
-  { name: 'Podcast', icon: <GraphicEqIcon />, },
-  { name: 'Movie', icon: <OndemandVideoIcon />, },
-  { name: 'Gaming', icon: <SportsEsportsIcon />, },
-  { name: 'Live', icon: <LiveTvIcon />, },
-  { name: 'Sport', icon: <FitnessCenterIcon />, },
-  { name: 'Fashion', icon: <CheckroomIcon />, },
-  { name: 'Beauty', icon: <FaceRetouchingNaturalIcon />, },
-  { name: 'Comedy', icon: <TheaterComedyIcon />, },
-  { name: 'Gym', icon: <FitnessCenterIcon />, },
-  { name: 'Crypto', icon: <DeveloperModeIcon />, },
+    { name: 'New', icon: <TbZodiacCapricorn />, },
+//   { name: 'Daily', icon: <HomeIcon />, },
+  { name: 'Capricorn', icon: <TbZodiacCapricorn />, },
+  { name: 'Aquarius', icon: <TbZodiacAquarius />, },
+  { name: 'Pisces', icon: <TbZodiacPisces />, },
+  { name: 'Aries', icon: <TbZodiacAries />, },
+  { name: 'Taurus', icon: <TbZodiacTaurus /> },
+  { name: 'Gemini', icon: <TbZodiacGemini />, },
+  { name: 'Cancer', icon: <TbZodiacCancer />, },
+  { name: 'Leo', icon: <TbZodiacLeo />, },
+  { name: 'Virgo', icon: <TbZodiacVirgo />, },
+  { name: 'Libra', icon: <TbZodiacLibra />, },
+  { name: 'Scorpio', icon: <TbZodiacScorpio />, },
+  { name: 'Sagittarius', icon: <TbZodiacSagittarius />, },
+  
+//   { name: 'Beauty', icon: <FaceRetouchingNaturalIcon />, },
+//   { name: 'Comedy', icon: <TheaterComedyIcon />, },
+//   { name: 'Gym', icon: <FitnessCenterIcon />, },
+//   { name: 'Crypto', icon: <DeveloperModeIcon />, },
 ];
 
 export const demoThumbnailUrl = 'https://i.ibb.co/G2L2Gwp/API-Course.png';
