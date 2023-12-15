@@ -6,3 +6,4 @@ export {default as Sign} from './Sign';
 // export {default as SearchFeed} from './SearchFeed';
 
 export {default as SearchBar} from './SearchBar';
+export {default as Sidebar} from './Sidebar';
