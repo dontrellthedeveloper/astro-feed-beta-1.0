@@ -22,14 +22,14 @@ const Feed = () => {
         console.log(sign)
 
 
-    useEffect(() => {
-      setVideos(null);
+    // useEffect(() => {
+    //   setVideos(null);
   
-      fetchFromAPI(`search?part=snippet&q=${selectedCategory}`)
-        .then((data) => setSign(data.items))
-      }, [selectedCategory]);
+    //   fetchFromAPI2(`search?part=snippet&q=${selectedCategory}`)
+    //     .then((data) => setSign(data.items))
+    //   }, [selectedCategory]);
 
-      console.log(sign)    
+    //   console.log(sign)    
 
 
   return (
@@ -51,7 +51,7 @@ const Feed = () => {
           <span style={{ color: "#FC1503" }}></span>
         </Typography>
 
-        <Videos videos={videos}  />
+        {/* <Videos videos={videos}  /> */}
       </Box>
     </Stack>
   );
