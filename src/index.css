@@ -22,7 +22,7 @@ body {
 
 a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 
 ::-webkit-scrollbar {
@@ -41,11 +41,85 @@ a {
 }
 
 .category-btn:hover {
-  background-color: #FC1503 !important;
+  background-color: #FC1503;
   color: white !important;
 }
 
-.category-btn:hover span{
+.category-btn-sag:hover {
+  background-color: #984F8E;
+  color: white !important;
+}
+
+.category-btn-scorpio:hover {
+  background-color: #000;
+  color: white !important;
+}
+
+.category-btn-libra:hover {
+  background-color: #B8BEE7;
+  color: white !important;
+}
+
+.category-btn-leo:hover {
+  background-color: #EDDD96;
+  color: white !important;
+}
+
+.category-btn-virgo:hover {
+  background-color: #848259;
+  color: white !important;
+}
+
+
+.category-btn-cancer:hover {
+  background-color: #DDDCDA;
+  color: white !important;
+}
+
+.category-btn-gemini:hover {
+  background-color: #FEBC04;
+  color: white !important;
+}
+
+.category-btn-taurus:hover {
+  background-color: #65BB45;
+  color: white !important;
+}
+
+.category-btn-aries:hover {
+  background-color: #F33A25;
+  color: white !important;
+}
+
+.category-btn-pisces:hover {
+  background-color: #B6CF79;
+  color: white !important;
+}
+
+.category-btn-aq:hover {
+  background-color: #4A62EF;
+  color: white !important;
+}
+
+.category-btn-cap:hover {
+  background-color: #7A6E64;
+  color: white !important;
+}
+
+
+.category-btn:hover span,
+.category-btn-libra:hover span,
+.category-btn-sag:hover span,
+.category-btn-scorpio:hover span,
+.category-btn-leo:hover span,
+.category-btn-virgo:hover span,
+.category-btn-cancer:hover span,
+.category-btn-gemini:hover span,
+.category-btn-taurus:hover span,
+.category-btn-aries:hover span,
+.category-btn-pisces:hover span,
+.category-btn-aq:hover span,
+.category-btn-cap:hover span  {
   color: white !important;
 }
 
@@ -60,7 +134,19 @@ a {
   width:350px;
 }
 
-.category-btn{
+.category-btn,
+.category-btn-sag,
+.category-btn-scorpio,
+.category-btn-libra,
+.category-btn-leo,
+.category-btn-virgo,
+.category-btn-cancer,
+.category-btn-gemini,
+.category-btn-taurus,
+.category-btn-aries, 
+.category-btn-pisces,
+.category-btn-aq,
+.category-btn-cap {
   font-weight: bold !important;
   text-transform: capitalize;
   display: flex;

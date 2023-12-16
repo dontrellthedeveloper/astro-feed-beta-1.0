@@ -10,11 +10,18 @@ headers: {
 }
 };
 export const fetchFromAPI = async (url) => {
-const { data } = await axios.get(`${BASE_URL}/sign?s=libra`, options);
-// const { data } = await axios.get(`${BASE_URL2}/${url}`, options);
+const { data } = await axios.get(`${BASE_URL}/sign?s=aries`, options);
+// const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
 console.log(data)
 return data;
 };
+
+export const fetchAries = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=aries`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+    };
 
 
 export const BASE_URL2 = 'https://youtube-v311.p.rapidapi.com';

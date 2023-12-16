@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
-import { Sidebar, Videos } from "./";
+import { Sidebar, Videos } from "./../";
 
-import { fetchAries, fetchFromAPI2 } from "../utils/fetchFromAPI";
+import { fetchAries, fetchFromAPI2 } from "../../utils/fetchFromAPI";
 
-import { categories } from "../utils/constants";
+import { categories } from "../../utils/constants";
 
-const Feed = () => {
-    const [selectedCategory, setSelectedCategory] = useState("libra");
+const Taurus = () => {
+    const [selectedCategory, setSelectedCategory] = useState("aries");
     const [videos, setVideos] = useState(null);
     const [sign, setSign] = useState(null);
 
@@ -15,11 +15,11 @@ const Feed = () => {
     useEffect(() => {
         setSign(null);
     
-        fetchAries(`sign?s=${selectedCategory}`)
+        fetchAries(`sign?s=aries`)
           .then((data) => setSign(data.items))
         }, [selectedCategory]);
 
-        console.log(sign)
+        
 
 
     // useEffect(() => {
@@ -35,7 +35,7 @@ const Feed = () => {
   return (
     <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
       <Box sx={{ height: { sx: "auto", md: "92vh" }, borderRight: "1px solid #3d3d3d", px: { sx: 0, md: 2 } }}>
-        <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
         
         <Typography className="copyright" variant="body2" sx={{ mt: 1.5, color: "#fff", }}>
           Copyright © 2024 Star Gazing
@@ -57,7 +57,7 @@ const Feed = () => {
   );
 };
 
-export default Feed;
+export default Taurus;
 
 
 
