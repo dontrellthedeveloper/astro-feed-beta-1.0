@@ -9,10 +9,10 @@ headers: {
     'X-RapidAPI-Host': 'horoscope-astrology.p.rapidapi.com'
 }
 };
-
 export const fetchFromAPI = async (url) => {
-const { data } = await axios.get(`${BASE_URL}/${url}`, options);
-
+const { data } = await axios.get(`${BASE_URL}/sign?s=libra`, options);
+// const { data } = await axios.get(`${BASE_URL2}/${url}`, options);
+console.log(data)
 return data;
 };
 
@@ -26,9 +26,7 @@ const options2 = {
     'X-RapidAPI-Host': 'youtube-v311.p.rapidapi.com'
     }
 };
-
 export const fetchFromAPI2 = async (url) => {
     const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
-
     return data;
 };
