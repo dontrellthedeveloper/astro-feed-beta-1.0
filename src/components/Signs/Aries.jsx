@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { Sidebar, Videos } from "./../";
 
-import { fetchAries, fetchFromAPI2 } from "../../utils/fetchFromAPI";
+import { fetchAries } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
 

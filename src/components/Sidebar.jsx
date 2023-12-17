@@ -36,7 +36,7 @@ const Categories = ({selectedCategory, setSelectedCategory}) => (
         </span>
       </button>
     ))} */}
-
+      <Link to={`/aries`}>
         <button
           className="category-btn-aries"
           onClick={() => setSelectedCategory("aries")}
@@ -45,17 +45,17 @@ const Categories = ({selectedCategory, setSelectedCategory}) => (
             color: "white",
           }}
         >
-         <Link to={`/aries`}>
+         
           <span style={{ color: "aries" === selectedCategory ? "white" : "#F33A25", marginRight: "15px" }}>
           <TbZodiacAries />
           </span>
           <span style={{ opacity: "aries" === selectedCategory ? "1" : "0.8" }}>
               Aries
           </span>
-          </Link>
+     
         </button>
-
-
+        </Link>
+        <Link to={`/taurus`}>
       <button
         className="category-btn-taurus"
         onClick={() => setSelectedCategory("taurus")}
@@ -64,15 +64,16 @@ const Categories = ({selectedCategory, setSelectedCategory}) => (
           color: "white",
         }}
       >
-        <Link to={`/taurus`}>
+               
         <span style={{ color: "taurus" === selectedCategory ? "white" : "#65BB45", marginRight: "15px" }}>
         <TbZodiacTaurus />
         </span>
         <span style={{ opacity: "taurus" === selectedCategory ? "1" : "0.8" }}>
         taurus
         </span>
-        </Link>
+
       </button>
+      </Link>
       <button
         className="category-btn-gemini"
         onClick={() => setSelectedCategory("gemini")}

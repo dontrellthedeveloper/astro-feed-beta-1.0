@@ -12,14 +12,14 @@ const Feed = () => {
     const [sign, setSign] = useState(null);
 
 
-    useEffect(() => {
-        setSign(null);
+    // useEffect(() => {
+    //     setSign(null);
     
-        fetchAries(`sign?s=${selectedCategory}`)
-          .then((data) => setSign(data.items))
-        }, [selectedCategory]);
+    //     fetchAries(`sign?s=${selectedCategory}`)
+    //       .then((data) => setSign(data.items))
+    //     }, [selectedCategory]);
 
-        console.log(sign)
+    //     console.log(sign)
 
 
     // useEffect(() => {

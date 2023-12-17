@@ -43,67 +43,80 @@ a {
 .category-btn:hover {
   background-color: #FC1503;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-sag:hover {
   background-color: #984F8E;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-scorpio:hover {
   background-color: #000;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-libra:hover {
   background-color: #B8BEE7;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-leo:hover {
   background-color: #EDDD96;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-virgo:hover {
   background-color: #848259;
   color: white !important;
+  width: 100%;
 }
 
 
 .category-btn-cancer:hover {
   background-color: #DDDCDA;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-gemini:hover {
   background-color: #FEBC04;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-taurus:hover {
   background-color: #65BB45;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-aries:hover {
   background-color: #F33A25;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-pisces:hover {
   background-color: #B6CF79;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-aq:hover {
   background-color: #4A62EF;
   color: white !important;
+  width: 100%;
 }
 
 .category-btn-cap:hover {
   background-color: #7A6E64;
   color: white !important;
+  width: 100%;
 }
 
 
@@ -156,6 +169,7 @@ a {
   background: transparent;
   outline: none;
   border: none;
+  width: 100%;
 
   padding: 7px 15px;
   margin: 10px 0px;
