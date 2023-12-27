@@ -103,8 +103,8 @@ const General = () => {
   return (
     <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
-            <div className="card aries-card">
-              <h2 className="card-header">Compatibility</h2>
+            <div className="card card-sm aries-card">
+              <h2 className="card-header aries">Compatibility</h2>
               <p>
                 {sign.compatibility.substring(25).split(',').map((substring, idx) => {
                   return (
@@ -116,8 +116,8 @@ const General = () => {
                 })}
               </p>
             </div>
-            <div className="card aries-card">
-              <h2 className="card-header">Strengths</h2>
+            <div className="card card-sm aries-card">
+              <h2 className="card-header aries">Strengths</h2>
               <p>
                 {sign.strengths.split(',').map((substring, idx) => {
                   return (
@@ -130,8 +130,8 @@ const General = () => {
               </p>
             </div>
 
-            <div className="card aries-card">
-              <h2 className="card-header">Weaknesses</h2>
+            <div className="card card-sm aries-card">
+              <h2 className="card-header aries">Weaknesses</h2>
               <p>
                 {sign.weaknesses.split(',').map((substring, idx) => {
                   return (
@@ -175,16 +175,12 @@ const About = () => {
       )  
 
   return (
-    <>
-      <h2>About {sign.name}</h2>
-      <p>{sign.about}</p>
-
-      {/* <h2>Compatibility</h2>
-      <p>{sign.compatibility}</p> */}
-      {/* <h2>Ruling Planet</h2> */}
-
-
-    </>
+    <div className="card-s">
+      <div className="card aries-card">
+        <h2 className="card-header aries aries-card-detail">About {sign.name}</h2>
+        <p>{sign.about}</p>
+      </div>
+    </div>
   )
 }
 
@@ -267,8 +263,12 @@ const Health = () => {
 
   return (
     <>
-      <h2>{sign.name } Health</h2>
-      <p>{sign.health}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name } Health</h2>
+          <p>{sign.health}</p>
+        </div>
+      </div>
     </>
   )
 }
@@ -291,8 +291,12 @@ const Love = () => {
 
   return (
     <>
-      <h2>{sign.name } in Love</h2>
-      <p>{sign.love}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name } in Love</h2>
+          <p>{sign.love}</p>
+        </div>
+      </div>
     </>
   )
 }
@@ -315,8 +319,12 @@ const Relationships = () => {
 
   return (
     <>
-      <h2>{sign.name } Relationships</h2>
-      <p>{sign.relationship}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name} Relationships</h2>
+          <p>{sign.relationship}</p>
+        </div>
+      </div>
     </>
   )
 }
@@ -339,8 +347,12 @@ const Nature = () => {
 
   return (
     <>
-      <h2>{sign.name } Nature</h2>
-      <p>{sign.nature}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name} Nature</h2>
+          <p>{sign.nature}</p>
+        </div>
+      </div>
     </>
   )
 }
@@ -363,8 +375,12 @@ const Men = () => {
 
   return (
     <>
-      <h2>{sign.name } Men</h2>
-      <p>{sign.man}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name } Men</h2>
+          <p>{sign.man}</p>
+        </div>
+      </div>
     </>
   )
 }
@@ -387,8 +403,12 @@ const Women = () => {
 
   return (
     <>
-      <h2>{sign.name } Women</h2>
-      <p>{sign.woman}</p>
+      <div className="card-s">
+        <div className="card aries-card">
+          <h2 className="card-header aries aries-card-detail">{sign.name } Women</h2>
+          <p>{sign.woman}</p>
+        </div>
+      </div>
     </>
   )
 }

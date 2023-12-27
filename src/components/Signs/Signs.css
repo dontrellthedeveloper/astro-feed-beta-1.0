@@ -4,10 +4,11 @@
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
-    height: 100vh;
+    /* height: 100vh; */
 }
 .main--s2 {
-    height: 100vh;
+    height: 140vh;
+    /* height: 140%; */
 }
 
 .main--s.aries {
@@ -95,14 +96,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 .zodiac-type.aries {
     color: #FC1503;
+    border: 2px solid #FC1503;
+    background-color: #fff3f2;
 }
 
 .zodiac-type-text {
-    padding-left: 10px;
+    padding-left: 6px;
     font-weight: 800;
 }
 
@@ -119,14 +124,18 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    border-radius: 10px 10px 10px 10px;
+    padding: 10px;
 }
 
 .zodiac-planet.aries {
     color: #7e0a02;
+    border: 2px solid #FC1503;
+    background-color: #fff3f2;
 }
 
 .zodiac-planet-text {
-    padding-left: 10px;
+    padding-left: 6px;
     font-weight: 800;
 }
 
@@ -186,9 +195,14 @@
 
 .cards-s .card .card-header {
     position: relative;
-    padding: 0px 20px;
-    height: 60px;
+    padding: 5px 20px;
+    height: 50px;
     margin-bottom: 0;
+
+}
+
+.card-header {
+    padding-top: 20px;
 }
 
 
@@ -200,8 +214,28 @@
     width: 25px;
     height: 4px;
     border-radius: 10px;
-    background: #FC1503;
+
     /* display: none; */
+}
+
+.aries-card-detail {
+    position: relative;
+}
+
+
+.aries-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #FC1503;
+}
+
+.cards-s .card .card-header.aries:before {
+    background: #FC1503;
 }
 
 
@@ -226,6 +260,7 @@
     box-shadow: 0px 2px 0px #fff3f2;
     border-bottom: 2px solid #fff3f2;
     background-color: #fff3f2;
+    border-radius: 10px 10px 0px 0px;
 }
 
 .tab .tab-headers .tab-header.taurus.active {
@@ -266,18 +301,42 @@
 }
 
 .card > p {
+    line-height: 45px;
+    font-weight: 500;
+    max-width: 550px;
+    margin: 30px auto;
+    margin-bottom: 40px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.card-sm > p {
     line-height: 27px;
     font-weight: 600;
     text-transform: capitalize;
     margin-top: 5px;
     font-size: 16.5px;
+    margin-bottom: 20px;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+
+
+.card {
+    border-radius: 10px 10px 10px 10px;
+    background-color: #fff;
+}
+
+.card-sm {
+    width: 200px; 
 }
 
 .aries-card {
-    width: 200px; 
     color: #7e0a02; 
-    background-color: #fff;
     border: 2px solid #FC1503;
+    max-width: 600px;
+    margin: 30px auto;
 }
 
 
@@ -300,12 +359,13 @@
 
 .tab .tab-body > p {
     color: #7e0a02;
-    margin-bottom: 10px;
+ 
     /* font-size: 17px; */
     line-height: 45px;
     font-weight: 500;
     max-width: 550px;
-    margin: 30px auto;
+    /* margin: 30px auto;
+    margin-bottom: 10px; */
 }
 
 .tab .tab-body.aries > p {

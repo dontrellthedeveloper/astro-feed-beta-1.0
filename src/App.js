@@ -8,7 +8,7 @@ import { useState } from "react";
 
 
 const App = () => {
-  const [selectedCategory, setSelectedCategory] = useState("libra");
+  const [selectedCategory, setSelectedCategory] = useState(null);
 
 return (
   <BrowserRouter>
