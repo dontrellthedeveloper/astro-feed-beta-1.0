@@ -1,20 +1,160 @@
+/*  Main Background  */
+
 .main--s {
     margin: 0px;
     padding: 0px;
     box-sizing: border-box;
+    height: 100vh;
+}
+.main--s2 {
+    height: 100vh;
 }
 
-.tab {
-    /* maring: 20px auto; */
+.main--s.aries {
+    background: url("../../assets/aries-bg.png") no-repeat fixed center;
+    background-size: cover;
+}
+.main--s.taurus {
+    background: url("../../assets/taurus-bg.png") no-repeat fixed center;
+    background-size: cover;
+}
+
+.main--s .main--s2 {
+    background: rgba(0,0,0,0.8);
+}
+
+
+/* Main Content */
+
+.main-content {
     max-width: 800px;
-    width: 95%;
+    margin: 0 auto;
+    background-color: #fff;
+    height: 100%;
+}
+
+
+/* Main Header */
+.main-header {
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+
+
+
+/* Header Symbol  */
+.header-symbol-container {
+    text-align: center;
+}
+.aries-symbol {
+    border-radius: 50%;
+    border: 1px solid #7e0a02;
+    padding: 10px;
+    background-color: #FC1503;
+    color: #fff;
+    text-align: center;
+}
+.taurus-symbol {
+    border-radius: 50%;
+    border: 1px solid #203c16;
+    padding: 10px;
+    background-color: #65bb45;
+    color: #fff;
+}
+
+/* Zodiac Name */
+.zodiac-name {
+    text-align: center;
+}
+
+.zodiac-name.aries {
+    color: #650801;
+}
+
+/* Zodiac Date Range */
+.zodiac-date {
+    text-align: center;
+    font-weight: 600;
+}
+
+.zodiac-date.aries {
+    color: #7e0a02;
+}
+
+/* Zodiac Type */
+.zodiac-type-container {
+    display: flex;
+    justify-content: space-evenly;
+    max-width: 220px;
+    margin: 0 auto;
+    padding-top: 5px;
+}
+
+.zodiac-type {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zodiac-type.aries {
+    color: #FC1503;
+}
+
+.zodiac-type-text {
+    padding-left: 10px;
+    font-weight: 800;
+}
+
+.zodiac-type-text.aries {
+    color: #7e0a02;
+}
+
+/* Zodiac Planet */
+.zodiac-planet-size {
+    width: 26px;
+}
+.zodiac-planet {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.zodiac-planet.aries {
+    color: #7e0a02;
+}
+
+.zodiac-planet-text {
+    padding-left: 10px;
+    font-weight: 800;
+}
+
+.zodiac-planet-text.aries {
+    color: #7e0a02;
+}
+
+/* Tabs */
+.tab {
+    max-width: 800px;
+    width: 100%;
+}
+
+.tab.aries {
+    min-height: 340px;
 }
 
 .tab .tab-headers {
     display: flex;
     flex-wrap: wrap;
-    border-bottom: 2px solid #FC1503;
     justify-content: center;
+}
+
+.tab .tab-headers.aries {
+    border-bottom: 2px solid #FC1503;
+}
+.tab .tab-headers.taurus {
+    border-bottom: 2px solid #65bb45;
 }
 
 .tab .tab-headers .tab-header {
@@ -24,10 +164,15 @@
     line-height: 50px;
     z-index: 2;
     cursor: pointer;
-    color: #7e0a02;
     font-weight: 600;
 }
 
+.tab .tab-headers .tab-header.aries {
+    color: #7e0a02;
+}
+.tab .tab-headers .tab-header.taurus {
+    color: #203c16;
+}
 .tab .tab-headers .tab-header:before {
     content: "";
     position: absolute;
@@ -35,40 +180,140 @@
     left:  20px;
     width: 25px;
     height: 4px;
-    background: #7e0a02;
     border-radius: 10px;
     display: none;
 }
 
-
-.tab .tab-headers .tab-header.active {
-    color: #FC1503;
-    border: 2px solid #FC1503;
-    border-bottom: none;
-    box-shadow: 0px 2px 0px #fff;
+.cards-s .card .card-header {
+    position: relative;
+    padding: 0px 20px;
+    height: 60px;
+    margin-bottom: 0;
 }
 
-.tab .tab-headers .tab-header.active::before {
+
+.cards-s .card .card-header:before {
+    content: "";
+    position: absolute;
+    bottom: 10px;
+    left:  44%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
     background: #FC1503;
+    /* display: none; */
+}
+
+
+.tab .tab-headers .tab-header.aries:before {
+    background: #7e0a02;
+}
+.tab .tab-headers .tab-header.taurus:before {
+    background: #203c16;
+}
+
+
+
+
+/* .tab .tab-headers .tab-header.active {
+    border-bottom: none;
+    box-shadow: 0px 2px 0px #fff;
+} */
+
+.tab .tab-headers .tab-header.aries.active {
+    color: #FC1503;
+    border: 2px solid #FC1503;
+    box-shadow: 0px 2px 0px #fff3f2;
+    border-bottom: 2px solid #fff3f2;
+    background-color: #fff3f2;
+}
+
+.tab .tab-headers .tab-header.taurus.active {
+    color: #65bb45;
+    border: 2px solid #65bb45;
+    box-shadow: 0px 2px 0px #fff;
+    border-bottom: 2px solid #fff;
+}
+
+
+
+.tab .tab-headers .tab-header.active::before {
     display: inline;
+}
+
+.tab .tab-headers .tab-header.aries.active::before {
+    background: #FC1503;
+}
+.tab .tab-headers .tab-header.taurus.active::before {
+    background: #2d541f;
 }
 
 .tab .tab-body {
     padding: 30px 20px;
-    border-bottom: 2px solid #FC1503;
 }
 
+.tab .tab-body.aries {
+    border-bottom: 2px solid #FC1503;
+    background-color: #fff3f2;
+}
+
+.tab .tab-body.taurus {
+    border-bottom: 2px solid #65bb45;
+}
+
+.cards-s {
+    /* margin-top: 40px; */
+}
+
+.card > p {
+    line-height: 27px;
+    font-weight: 600;
+    text-transform: capitalize;
+    margin-top: 5px;
+    font-size: 16.5px;
+}
+
+.aries-card {
+    width: 200px; 
+    color: #7e0a02; 
+    background-color: #fff;
+    border: 2px solid #FC1503;
+}
+
+
+
+
+
 .tab .tab-body > h2 {
-    /* color: #222; */
     color: #7e0a02;
     margin-bottom: 15px;
     margin-top: 5px;
     position: relative;
 }
 
+.tab .tab-body.aries > h2 {
+    color: #7e0a02;
+}
+.tab .tab-body.taurus > h2 {
+    color: #203c16;
+}
 
 .tab .tab-body > p {
-    /* color: #555; */
     color: #7e0a02;
     margin-bottom: 10px;
+    /* font-size: 17px; */
+    line-height: 45px;
+    font-weight: 500;
+    max-width: 550px;
+    margin: 30px auto;
 }
+
+.tab .tab-body.aries > p {
+    color: #7e0a02;
+}
+
+.tab .tab-body.taurus > p {
+    color: #203c16;
+}
+
+

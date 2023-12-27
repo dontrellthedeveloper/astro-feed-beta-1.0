@@ -12,10 +12,17 @@ const App = () => {
 
 return (
   <BrowserRouter>
-      <Box sx={{ backgroundColor: '' }}>
+      <Box sx={{ backgroundColor: '#000' }}>
         <Navbar />
         <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
-          <Box sx={{ backgroundColor: '#000' ,height: { sx: "auto", md: "92vh" }, borderRight: "1px solid #3d3d3d", px: { sx: 0, md: 2 } }}>
+          <Box sx={{ 
+              backgroundColor: '#000' ,
+              height: { sx: "auto", md: "92vh" }, 
+              // borderRight: "1px solid #3d3d3d", 
+              borderRight: "1px solid #000", 
+              px: { sx: 0, md: 2 } 
+            }}
+          >
             <Sidebar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
             
 
@@ -25,26 +32,21 @@ return (
             </Typography>
           </Box>
 
-          <Box p={2} sx={{ overflowY: "auto", height: "85vh", flex: 2 }}>
-            {/* <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-              {selectedCategory} <span style={{ color: "#FC1503" }}>feed</span>
-            </Typography> */}
-
-            <Routes>
-                <Route exact path='/' element={<Feed />} />
-                <Route path='/aries' element={<Aries />} />
-                <Route path='/taurus' element={<Taurus />} />
-                <Route path='/sign?s=:id' element={<Feed />} />
-                <Route path='/video/:id' element={<VideoDetail />} />
-                <Route path='/channel/:id' element={<ChannelDetail />} />
-                <Route path='/search/:searchTerm' element={<SearchFeed />} />
-            </Routes>
-{/* 
-            <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-              <span style={{ color: "#FC1503" }}></span>
-            </Typography> */}
-
-
+          <Box 
+          // p={2}
+          className="" 
+          sx={{ overflowY: "auto", height: "92vh", flex: 2 }}>
+            <div className="" style={{height: '92vh'}}>
+              <Routes>
+                  <Route exact path='/' element={<Feed />} />
+                  <Route path='/aries' element={<Aries />} />
+                  <Route path='/taurus' element={<Taurus />} />
+                  <Route path='/sign?s=:id' element={<Feed />} />
+                  <Route path='/video/:id' element={<VideoDetail />} />
+                  <Route path='/channel/:id' element={<ChannelDetail />} />
+                  <Route path='/search/:searchTerm' element={<SearchFeed />} />
+              </Routes>
+            </div>
           </Box>
         </Stack>
       </Box>

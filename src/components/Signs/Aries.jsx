@@ -8,10 +8,11 @@ import { fetchAries } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
 
-import './Signs.css'
+
 import { TbZodiacAries } from "react-icons/tb";
 
 import { FaFireAlt } from "react-icons/fa";
+import './Signs.css'
 import {images} from '../../constants';
 
 
@@ -36,86 +37,124 @@ const Aries = () => {
 
 
   return (
-    <div className="main--s">
-        <div style={{marginBottom: '50px', marginTop: '50px'}}>
-          <p style={{textAlign: 'center', color: '#FC1503'}}>
-          {/* {sign.symbol} */}
-          <TbZodiacAries size={40} />
-          </p>
-          <h2 style={{textAlign: 'center', color: '#650801'}}>{sign.name}</h2>
-          <p style={{textAlign: 'center', color: '#7e0a02', fontWeight: '500'}}>{sign.date_range}</p>
-          <div style={{display: 'flex', justifyContent: 'space-evenly', maxWidth: '220px', margin: '0 auto', paddingTop: '5px'}}>
-            <div style={{textAlign: 'center', color: '#FC1503', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <FaFireAlt size={25} />
-              <span style={{paddingLeft: '10px', color: '#7e0a02', fontWeight: '800'}}>{sign.element}
-              </span>
+    <div className="main--s aries">
+      <div className="main--s2">
+        <div className="main-content">
+            <div className="main-header">
+              <p className="header-symbol-container">
+                <TbZodiacAries className="aries-symbol" size={40} />
+              </p>
+              <h2 className="zodiac-name aries">{sign.name}</h2>
+              <p className="zodiac-date aries">{sign.date_range}</p>
+              <div className="zodiac-type-container">
+                <div className="zodiac-type aries">
+                  <FaFireAlt size={25} />
+                  <span className="zodiac-type-text aries">
+                    {sign.element}
+                  </span>
+                </div>
+      
+                <div className="zodiac-planet aries">
+                  <img className="zodiac-planet-size" src={images.mars}/>
+                  <span className="zodiac-planet-text aries">      
+                    {sign.ruling_planet}
+                  </span>
+                </div>
+              </div>  
             </div>
-  
-            <div style={{textAlign: 'center', color: '#7e0a02', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
-              <img src={images.mars} style={{width: '30px'}}/>
-              <span style={{paddingLeft: '10px', color: '#7e0a02', fontWeight: '800'}}>      
-                {sign.ruling_planet}
-              </span>
-            </div>
-          </div>  
+            <Tabs
+              config={[
+                {header: "General", component: <General/>},   
+                {header: "About", component: <About/>},   
+                {header: "Women", component: <Women/>},
+                {header: "Men", component: <Men/>},
+                {header: "Love", component: <Love/>}, 
+                {header: "Relationships", component: <Relationships/>},
+                // {header: "Career", component: <Career/>},
+                {header: "Nature", component: <Nature/>},
+                {header: "Health", component: <Health/>},
+              ]}
+            />
         </div>
-        
-
-        {/* <br/> */}
-        <Tabs
-          config={[
-            {header: "About", component: <About/>},   
-            {header: "Women", component: <Women/>},
-            {header: "Men", component: <Men/>},
-            {header: "Love", component: <Love/>}, 
-            {header: "Career", component: <Career/>},
-            {header: "Nature", component: <Nature/>},
-            {header: "Health", component: <Health/>},
-            {header: "Relationships", component: <Relationships/>},
-          ]}
-        />
-
-
-        {/* <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Health
-          <span style={{ color: "#FC1503" }}>{sign.health}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Love
-          <span style={{ color: "#FC1503" }}>{sign.love}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Men
-          <span style={{ color: "#FC1503" }}>{sign.man}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Women
-          <span style={{ color: "#FC1503" }}>{sign.woman}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Nature
-          <span style={{ color: "#FC1503" }}>{sign.nature}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Relationship
-          <span style={{ color: "#FC1503" }}>{sign.relationship}</span>
-        </Typography>
-        <br/>
-        <br/> */}
+      </div>
 
     </div>
+
   );
 };
+
+
+const General = () => {
+  const [sign, setSign] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("");
+  useEffect(() => {
+
+      fetchAries()
+        .then((data) => setSign(data))
+        console.log(sign)
+      }, [selectedCategory]);
+
+      if(!sign) return (
+        <div className="preloader">
+            <div className="status">...</div>
+        </div>
+      )  
+
+  return (
+    <>
+        <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
+            <div className="card aries-card">
+              <h2 className="card-header">Compatibility</h2>
+              <p>
+                {sign.compatibility.substring(25).split(',').map((substring, idx) => {
+                  return (
+                    <div key={idx}>
+                      <span>{substring}</span>
+                      <br/>
+                    </div>
+                  )
+                })}
+              </p>
+            </div>
+            <div className="card aries-card">
+              <h2 className="card-header">Strengths</h2>
+              <p>
+                {sign.strengths.split(',').map((substring, idx) => {
+                  return (
+                    <div key={idx}>
+                      <span>{substring}</span>
+                      <br/>
+                    </div>
+                  )
+                })}
+              </p>
+            </div>
+
+            <div className="card aries-card">
+              <h2 className="card-header">Weaknesses</h2>
+              <p>
+                {sign.weaknesses.split(',').map((substring, idx) => {
+                  return (
+                    <div key={idx}>
+                      <span>{substring}</span>
+                      <br/>
+                    </div>
+                  )
+                })}
+              </p>
+            </div>
+
+
+          </div>
+
+      {/* <h2>Compatibility</h2>
+      <p>{sign.compatibility}</p> */}
+      {/* <h2>Ruling Planet</h2> */}
+
+
+    </>
+  )
+}
 
 
 
@@ -139,50 +178,7 @@ const About = () => {
     <>
       <h2>About {sign.name}</h2>
       <p>{sign.about}</p>
-      <div style={{display: 'flex', justifyContent:'space-evenly'}}>
-        <div style={{width: '200px', color: '#7e0a02'}}>
-          <h2>Compatibility</h2>
-          <p>
-            {sign.compatibility.substring(25).split(',').map((substring, idx) => {
-              return (
-                <div key={idx}>
-                  <span>{substring}</span>
-                  <br/>
-                </div>
-              )
-            })}
-          </p>
-        </div>
-        <div style={{width: '200px', color: '#7e0a02'}}>
-          <h2>Strengths</h2>
-          <p>
-            {sign.strengths.split(',').map((substring, idx) => {
-              return (
-                <div key={idx}>
-                  <span>{substring}</span>
-                  <br/>
-                </div>
-              )
-            })}
-          </p>
-        </div>
 
-        <div style={{width: '200px', color: '#7e0a02'}}>
-          <h2>Weaknesses</h2>
-          <p>
-            {sign.weaknesses.split(',').map((substring, idx) => {
-              return (
-                <div key={idx}>
-                  <span>{substring}</span>
-                  <br/>
-                </div>
-              )
-            })}
-          </p>
-        </div>
-
-
-      </div>
       {/* <h2>Compatibility</h2>
       <p>{sign.compatibility}</p> */}
       {/* <h2>Ruling Planet</h2> */}
@@ -404,12 +400,12 @@ const Women = () => {
 const Tabs = ({config}) => {
   const [activeTab, setActiveTab] = React.useState(0)
   return (
-    <div className="tab" style={{margin: '0 auto', textAlign: 'center'}}>
-      <div className="tab-headers">
+    <div className="tab aries" style={{margin: '0 auto', textAlign: 'center'}}>
+      <div className="tab-headers aries">
         {
           config.map((entry,index)=>(
             <div
-              className={`tab-header ${activeTab === index ? "active" : ""} `}
+              className={`tab-header aries ${activeTab === index ? "active" : ""} `}
               onClick={()=>setActiveTab(index)}
             >
               {entry.header}
@@ -417,7 +413,7 @@ const Tabs = ({config}) => {
           ))
         }
       </div>
-      <div className="tab-body">
+      <div className="tab-body aries">
         {config[activeTab].component}
       </div>
     </div>

@@ -5,6 +5,12 @@ import { Sidebar, Videos } from "./../";
 import { fetchTaurus } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
+import { TbZodiacTaurus } from "react-icons/tb";
+
+import { FaEarthAmericas } from "react-icons/fa6";
+
+import './Signs.css'
+import {images} from '../../constants';
 
 const Taurus = () => {
     const [selectedCategory, setSelectedCategory] = useState("");
@@ -19,104 +25,366 @@ const Taurus = () => {
           console.log(sign)
         }, [selectedCategory]);
 
+        if(!sign) return (
+          <div className="preloader">
+              <div className="status">...</div>
+          </div>
+        )  
 
-  return (
-    <>
-        <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-          {sign.name} <span style={{ color: "#65BB45" }}>Feed</span>
-        </Typography>
 
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        About
-          <span style={{ color: "#65BB45" }}>{sign.about}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Career
-          <span style={{ color: "#65BB45" }}>{sign.career}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Compatibility
-          <span style={{ color: "#65BB45" }}>{sign.compatibility}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Birthdate Range
-          <span style={{ color: "#65BB45" }}>{sign.date_range}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Element
-          <span style={{ color: "#65BB45" }}>{sign.element}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Health
-          <span style={{ color: "#65BB45" }}>{sign.health}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Love
-          <span style={{ color: "#65BB45" }}>{sign.love}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Men
-          <span style={{ color: "#65BB45" }}>{sign.man}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Women
-          <span style={{ color: "#65BB45" }}>{sign.woman}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Nature
-          <span style={{ color: "#65BB45" }}>{sign.nature}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Relationship
-          <span style={{ color: "#65BB45" }}>{sign.relationship}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Ruling Planet
-          <span style={{ color: "#65BB45" }}>{sign.ruling_planet}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Strengths
-          <span style={{ color: "#65BB45" }}>{sign.strengths}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Symbol
-          <span style={{ color: "#65BB45" }}>{sign.symbol}</span>
-        </Typography>
-        <br/>
-        <br/>
-        <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
-        Weakness
-          <span style={{ color: "#65BB45" }}>{sign.weaknesses}</span>
-        </Typography>
-    </>
-  );
-};
+        return (
+          <div className="main--s taurus" style={{height: '92vh'}}>
+            <div className="main--s2" style={{height: '92vh'}}>
+              <div className="" style={{maxWidth: '800px',
+                margin: '0 auto',
+                backgroundColor: '#fff',
+                height: '100%'}}>
+                  <div className="" style={{paddingBottom: '50px', paddingTop: '50px'}}>
+                    <p  style={{textAlign: 'center', color: '#65bb45'}}>
+                    {/* {sign.symbol} */}
+                    <TbZodiacTaurus className="taurus-symbol" size={40} />
+                    </p>
+                    <h2 style={{textAlign: 'center', color: '#203c16'}}>{sign.name}</h2>
+                    <p style={{textAlign: 'center', color: '#203c16', fontWeight: '600'}}>{sign.date_range}</p>
+                    <div style={{display: 'flex', justifyContent: 'space-evenly', maxWidth: '220px', margin: '0 auto', paddingTop: '5px'}}>
+                      <div style={{textAlign: 'center', color: '#65bb45', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                        <FaEarthAmericas size={25} />
+                        <span style={{paddingLeft: '10px', color: '#203c16', fontWeight: '800'}}>{sign.element}
+                        </span>
+                      </div>
+            
+                      <div style={{textAlign: 'center', color: '#203c16', display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+                        <img src={images.venus} style={{width: '26px'}}/>
+                        <span style={{paddingLeft: '10px', color: '#203c16', fontWeight: '800'}}>      
+                          {sign.ruling_planet}
+                        </span>
+                      </div>
+                    </div>  
+                  </div>
+                  <Tabs
+                    config={[
+                      {header: "About", component: <About/>},   
+                      {header: "Women", component: <Women/>},
+                      {header: "Men", component: <Men/>},
+                      {header: "Love", component: <Love/>}, 
+                      {header: "Career", component: <Career/>},
+                      {header: "Nature", component: <Nature/>},
+                      {header: "Health", component: <Health/>},
+                      {header: "Relationships", component: <Relationships/>},
+                    ]}
+                  />
+              </div>
+            </div>
+          </div>
+        );
+      };
+      
+      
+      
+      const About = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+          
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>About {sign.name}</h2>
+            <p>{sign.about}</p>
+            <div style={{display: 'flex', justifyContent:'space-evenly'}}>
+              <div style={{width: '200px', color: '#203c16'}}>
+                <h2>Compatibility</h2>
+                <p>
+                  {sign.compatibility.split(',').map((substring, idx) => {
+                    return (
+                      <div key={idx}>
+                        <span>{substring}</span>
+                        <br/>
+                      </div>
+                    )
+                  })}
+                </p>
+              </div>
+              <div style={{width: '200px', color: '#203c16'}}>
+                <h2>Strengths</h2>
+                <p>
+                  {sign.strengths.split(',').map((substring, idx) => {
+                    return (
+                      <div key={idx}>
+                        <span>{substring}</span>
+                        <br/>
+                      </div>
+                    )
+                  })}
+                </p>
+              </div>
+      
+              <div style={{width: '200px', color: '#203c16'}}>
+                <h2>Weaknesses</h2>
+                <p>
+                  {sign.weaknesses.split(',').map((substring, idx) => {
+                    return (
+                      <div key={idx}>
+                        <span>{substring}</span>
+                        <br/>
+                      </div>
+                    )
+                  })}
+                </p>
+              </div>
+      
+      
+            </div>
+            {/* <h2>Compatibility</h2>
+            <p>{sign.compatibility}</p> */}
+            {/* <h2>Ruling Planet</h2> */}
+      
+      
+          </>
+        )
+      }
+      
+      const Compatibility = () => {
+      
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>Compatibility</h2>
+            <div>
+                <h2>Compatibility</h2>
+                <p>
+                  {sign.compatibility.substring(25).split(',').map((substring, idx) => {
+                    return (
+                      <div key={idx}>
+                        <span>{substring}</span>
+                        <br/>
+                      </div>
+                    )
+                  })}
+                </p>
+              </div>
+          </>
+        )
+      }
+      
+      const Career = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Careers</h2>
+            <p>{sign.career}</p>
+          </>
+        )
+      }
+      
+      const Health = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Health</h2>
+            <p>{sign.health}</p>
+          </>
+        )
+      }
+      
+      const Love = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } in Love</h2>
+            <p>{sign.love}</p>
+          </>
+        )
+      }
+      
+      const Relationships = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Relationships</h2>
+            <p>{sign.relationship}</p>
+          </>
+        )
+      }
+      
+      const Nature = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Nature</h2>
+            <p>{sign.nature}</p>
+          </>
+        )
+      }
+      
+      const Men = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Men</h2>
+            <p>{sign.man}</p>
+          </>
+        )
+      }
+      
+      const Women = () => {
+        const [sign, setSign] = useState('');
+        const [selectedCategory, setSelectedCategory] = useState("");
+        useEffect(() => {
+      
+          fetchTaurus()
+              .then((data) => setSign(data))
+              console.log(sign)
+            }, [selectedCategory]);
+      
+            if(!sign) return (
+              <div className="preloader">
+                  <div className="status">...</div>
+              </div>
+            )  
+      
+        return (
+          <>
+            <h2>{sign.name } Women</h2>
+            <p>{sign.woman}</p>
+          </>
+        )
+      }
+      
+      
+      
+      
+      
+      const Tabs = ({config}) => {
+        const [activeTab, setActiveTab] = React.useState(0)
+        return (
+          <div className="tab" style={{margin: '0 auto', textAlign: 'center'}}>
+            <div className="tab-headers taurus">
+              {
+                config.map((entry,index)=>(
+                  <div
+                    className={`tab-header taurus ${activeTab === index ? "active" : ""} `}
+                    onClick={()=>setActiveTab(index)}
+                  >
+                    {entry.header}
+                  </div>
+                ))
+              }
+            </div>
+            <div className="tab-body taurus">
+              {config[activeTab].component}
+            </div>
+          </div>
+        )
+      };
 
 export default Taurus;
 
