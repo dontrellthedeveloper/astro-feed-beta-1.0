@@ -6,6 +6,9 @@ import { fetchAries } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
 
+
+
+
 const Gemini = () => {
     const [selectedCategory, setSelectedCategory] = useState("");
     const [videos, setVideos] = useState(null);
@@ -24,7 +27,9 @@ const Gemini = () => {
     <>
         <Typography variant="h4" fontWeight="bold" mb={2} sx={{ color: "white" }}>
           {sign.name} <span style={{ color: "#FC1503" }}>Feed</span>
-        </Typography>
+        </Typography>  
+        
+        {}
 
         <Typography variant="p" fontWeight="bold" mb={2} sx={{ color: "white" }}>
         About
