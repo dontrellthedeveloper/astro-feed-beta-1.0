@@ -55,41 +55,44 @@ const Categories = ({selectedCategory, setSelectedCategory}) => (
           </span>
      
         </button>
-        </Link>
-        <Link to={`/taurus`}>
-      <button
-        className="category-btn-taurus"
-        onClick={() => setSelectedCategory("taurus")}
-        style={{
-          background: "taurus" === selectedCategory && "#65BB45",
-          color: "white",
-        }}
-      >
-               
-        <span style={{ color: "taurus" === selectedCategory ? "white" : "#65BB45", marginRight: "15px" }}>
-        <TbZodiacTaurus />
-        </span>
-        <span style={{ opacity: "taurus" === selectedCategory ? "1" : "0.8" }}>
-        taurus
-        </span>
-
-      </button>
       </Link>
-      <button
-        className="category-btn-gemini"
-        onClick={() => setSelectedCategory("gemini")}
-        style={{
-          background: "gemini" === selectedCategory && "#FEBC04",
-          color: "white",
-        }}
-      >
-        <span style={{ color: "gemini" === selectedCategory ? "white" : "#FEBC04", marginRight: "15px" }}>
-        <TbZodiacGemini />
-        </span>
-        <span style={{ opacity: "gemini" === selectedCategory ? "1" : "0.8" }}>
-        gemini
-        </span>
-      </button>
+      <Link to={`/taurus`}>
+            <button
+              className="category-btn-taurus"
+              onClick={() => setSelectedCategory("taurus")}
+              style={{
+                background: "taurus" === selectedCategory && "#65BB45",
+                color: "white",
+              }}
+            >
+                    
+              <span style={{ color: "taurus" === selectedCategory ? "white" : "#65BB45", marginRight: "15px" }}>
+              <TbZodiacTaurus />
+              </span>
+              <span style={{ opacity: "taurus" === selectedCategory ? "1" : "0.8" }}>
+              taurus
+              </span>
+
+            </button>
+      </Link>
+      <Link to={`/gemini`}>
+        <button
+          className="category-btn-gemini"
+          onClick={() => setSelectedCategory("gemini")}
+          style={{
+            background: "gemini" === selectedCategory && "#FEBC04",
+            color: "white",
+          }}
+        >
+          <span style={{ color: "gemini" === selectedCategory ? "white" : "#FEBC04", marginRight: "15px" }}>
+          <TbZodiacGemini />
+          </span>
+          <span style={{ opacity: "gemini" === selectedCategory ? "1" : "0.8" }}>
+          gemini
+          </span>
+        </button>
+      </Link>
+
       <button
         className="category-btn-cancer"
         onClick={() => setSelectedCategory("cancer")}

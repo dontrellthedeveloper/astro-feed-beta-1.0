@@ -4,6 +4,7 @@ import { Box, Stack, Typography } from "@mui/material";
 import { ChannelDetail, VideoDetail, SearchFeed, Sign, Navbar, Feed, Sidebar } from './components';
 import Aries from "./components/Signs/Aries";
 import Taurus from "./components/Signs/Taurus";
+import Gemini from "./components/Signs/Gemini";
 import { useState } from "react";
 
 
@@ -41,6 +42,7 @@ return (
                   <Route exact path='/' element={<Feed />} />
                   <Route path='/aries' element={<Aries />} />
                   <Route path='/taurus' element={<Taurus />} />
+                  <Route path='/gemini' element={<Gemini />} />
                   <Route path='/sign?s=:id' element={<Feed />} />
                   <Route path='/video/:id' element={<VideoDetail />} />
                   <Route path='/channel/:id' element={<ChannelDetail />} />

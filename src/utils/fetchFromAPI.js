@@ -30,6 +30,12 @@ export const fetchTaurus = async () => {
     return data;
 };
 
+export const fetchGemini = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=gemini`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
 
 
 
