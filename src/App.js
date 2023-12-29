@@ -6,6 +6,15 @@ import Aries from "./components/Signs/Aries";
 import Taurus from "./components/Signs/Taurus";
 import Gemini from "./components/Signs/Gemini";
 import { useState } from "react";
+import Cancer from "./components/Signs/Cancer";
+import Leo from "./components/Signs/Leo";
+import Virgo from "./components/Signs/Virgo";
+import Scorpio from "./components/Signs/Scorpio";
+import Libra from "./components/Signs/Libra";
+import Sagittarius from "./components/Signs/Sagittarius";
+import Capricorn from "./components/Signs/Capricorn";
+import Aquarius from "./components/Signs/Aquarius";
+import Pisces from "./components/Signs/Pisces";
 
 
 const App = () => {
@@ -43,6 +52,15 @@ return (
                   <Route path='/aries' element={<Aries />} />
                   <Route path='/taurus' element={<Taurus />} />
                   <Route path='/gemini' element={<Gemini />} />
+                  <Route path='/cancer' element={<Cancer />} />
+                  <Route path='/leo' element={<Leo />} />
+                  <Route path='/virgo' element={<Virgo />} />
+                  <Route path='/libra' element={<Libra />} />
+                  <Route path='/scorpio' element={<Scorpio />} />
+                  <Route path='/sagittarius' element={<Sagittarius />} />
+                  <Route path='/capricorn' element={<Capricorn />} />
+                  <Route path='/aquarius' element={<Aquarius />} />
+                  <Route path='/pisces' element={<Pisces />} />
                   <Route path='/sign?s=:id' element={<Feed />} />
                   <Route path='/video/:id' element={<VideoDetail />} />
                   <Route path='/channel/:id' element={<ChannelDetail />} />

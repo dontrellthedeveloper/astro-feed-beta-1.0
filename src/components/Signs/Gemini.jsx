@@ -19,7 +19,9 @@ import {images} from '../../constants';
 
 
 import { FaWind } from "react-icons/fa";
-
+import { GiBullHorns } from "react-icons/gi";
+import { MdDateRange } from "react-icons/md";
+import { MdPeopleOutline } from "react-icons/md";
 
 const Gemini = () => {
 
@@ -45,23 +47,41 @@ const Gemini = () => {
       <div className="main--s2">
         <div className="main-content">
             <div className="main-header">
-              <p className="header-symbol-container">
+              {/* <p className="header-symbol-container">
                 <TbZodiacGemini className="gemini-symbol" size={40} />
               </p>
               <h2 className="zodiac-name gemini">{sign.name}</h2>
-              <p className="zodiac-date gemini">{sign.date_range}</p>
+              <p className="zodiac-date gemini">{sign.date_range}</p> */}
               <div className="zodiac-type-container">
+                <TbZodiacGemini className="gemini-symbol" size={20} />
+                <div className="zodiac-type gemini" style={{backgroundColor: '#F9BC04', cursor:'default'}}>
+                  <span className="zodiac-type-text gemini" style={{color: '#896702'}}>
+                    {sign.name}
+                  </span>
+                </div>
+
                 <div className="zodiac-type gemini">
                   <FaWind size={25} />
                   <span className="zodiac-type-text gemini">
                     {sign.element}
                   </span>
                 </div>
-      
+                <div className="zodiac-type gemini">
+                  <MdPeopleOutline size={25} />
+                  <span className="zodiac-type-text gemini">
+                    {sign.symbol}
+                  </span>
+                </div>
                 <div className="zodiac-planet gemini">
                   <img className="zodiac-planet-size" src={images.mercury}/>
                   <span className="zodiac-planet-text gemini">      
                     {sign.ruling_planet}
+                  </span>
+                </div>
+                <div className="zodiac-type gemini">
+                  <MdDateRange size={25} />
+                  <span className="zodiac-type-text gemini">
+                    {sign.date_range}
                   </span>
                 </div>
               </div>  

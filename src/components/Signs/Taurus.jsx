@@ -16,7 +16,9 @@ import { FaEarthAmericas } from "react-icons/fa6";
 
 import './Signs.css'
 import {images} from '../../constants';
-
+import { MdDateRange } from "react-icons/md";
+import { GiRam } from "react-icons/gi";
+import { GiBullHorns } from "react-icons/gi";
 
 
 const Taurus = () => {
@@ -43,23 +45,41 @@ const Taurus = () => {
       <div className="main--s2">
         <div className="main-content">
             <div className="main-header">
-              <p className="header-symbol-container">
+              {/* <p className="header-symbol-container">
                 <TbZodiacTaurus className="taurus-symbol" size={40} />
               </p>
               <h2 className="zodiac-name taurus">{sign.name}</h2>
-              <p className="zodiac-date taurus">{sign.date_range}</p>
+              <p className="zodiac-date taurus">{sign.date_range}</p> */}
               <div className="zodiac-type-container">
+                <TbZodiacTaurus className="taurus-symbol" size={20} />
+                <div className="zodiac-type taurus" style={{backgroundColor: '#65bb45', cursor:'default'}}>
+                  <span className="zodiac-type-text aries" style={{color: '#fff'}}>
+                    {sign.name}
+                  </span>
+                </div>
                 <div className="zodiac-type taurus">
                   <FaEarthAmericas size={25} />
                   <span className="zodiac-type-text taurus">
                     {sign.element}
                   </span>
                 </div>
-      
+
+                <div className="zodiac-type taurus">
+                  <GiBullHorns size={25} />
+                  <span className="zodiac-type-text taurus">
+                    {sign.symbol}
+                  </span>
+                </div>
                 <div className="zodiac-planet taurus">
                   <img className="zodiac-planet-size" src={images.venus}/>
                   <span className="zodiac-planet-text taurus">      
                     {sign.ruling_planet}
+                  </span>
+                </div>
+                <div className="zodiac-type taurus">
+                  <MdDateRange size={25} />
+                  <span className="zodiac-type-text taurus">
+                    {sign.date_range}
                   </span>
                 </div>
               </div>  

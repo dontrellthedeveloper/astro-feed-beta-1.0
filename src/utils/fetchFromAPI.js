@@ -37,7 +37,68 @@ export const fetchGemini = async () => {
     return data;
 };
 
+export const fetchCancer = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=cancer`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
 
+export const fetchLeo = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=leo`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchVirgo = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=virgo`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchLibra = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=libra`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchScorpio = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=scorpio`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchSagittarius = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=sagittarius`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchCapricorn = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=capricorn`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchAquarius = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=aquarius`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
+export const fetchPisces = async () => {
+    const { data } = await axios.get(`${BASE_URL}/sign?s=pisces`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
 
 
 

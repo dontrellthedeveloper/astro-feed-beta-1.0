@@ -27,6 +27,7 @@
 
 .main--s .main--s2 {
     background: rgba(0,0,0,0.8);
+    /* background: rgba(255, 255, 255, 0.7); */
 }
 
 
@@ -42,8 +43,8 @@
 
 /* Main Header */
 .main-header {
-    padding-bottom: 50px;
-    padding-top: 20px;
+    padding-bottom: 30px;
+    padding-top: 30px;
 }
 
 
@@ -73,7 +74,7 @@
     border: 2px solid #896702;
     padding: 10px;
     background-color: #F9BC04;
-    color: #fff;
+    color: #896702;
 }
 
 /* Zodiac Name */
@@ -115,7 +116,8 @@
 .zodiac-type-container {
     display: flex;
     justify-content: space-evenly;
-    max-width: 220px;
+    /* max-width: 220px; */
+    max-width: 650px;
     margin: 0 auto;
     padding-top: 5px;
 }
