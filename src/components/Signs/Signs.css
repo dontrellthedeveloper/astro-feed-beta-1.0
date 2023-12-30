@@ -27,7 +27,7 @@
 
 .main--s .main--s2 {
     background: rgba(0,0,0,0.8);
-    /* background: rgba(255, 255, 255, 0.7); */
+    /* background: rgba(255, 255, 255, 0.8); */
 }
 
 
@@ -120,6 +120,38 @@
     max-width: 650px;
     margin: 0 auto;
     padding-top: 5px;
+}
+
+.zodiac-type-container.aries {
+    max-width: 600px;
+}
+
+.zodiac-type-container.taurus {
+    max-width: 600px;
+}
+
+.zodiac-type-container.leo {
+    max-width: 600px;
+}
+
+.zodiac-type-container.virgo {
+    max-width: 720px;
+}
+
+.zodiac-type-container.scorpio {
+    max-width: 720px;
+}
+
+.zodiac-type-container.sagittarius {
+    max-width: 750px;
+}
+
+.zodiac-type-container.aquarius {
+    max-width: 760px;
+}
+
+.zodiac-type-container.pisces {
+    max-width: 680px;
 }
 
 .zodiac-type {
@@ -518,8 +550,10 @@
     margin-top: 5px;
     font-size: 16.5px;
     margin-bottom: 20px;
-    padding-left: 0;
-    padding-right: 0;
+    /* padding-left: 10px;
+    padding-right: 10px; */
+    padding-left: 30px;
+    padding-right: 30px;
 }
 
 
@@ -530,7 +564,8 @@
 }
 
 .card-sm {
-    width: 200px; 
+    /* width: 200px;  */
+    width: 340px; 
 }
 
 .aries-card {

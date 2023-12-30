@@ -59,19 +59,19 @@ const Gemini = () => {
                     {sign.name}
                   </span>
                 </div>
-
-                <div className="zodiac-type gemini">
-                  <FaWind size={25} />
-                  <span className="zodiac-type-text gemini">
-                    {sign.element}
-                  </span>
-                </div>
                 <div className="zodiac-type gemini">
                   <MdPeopleOutline size={25} />
                   <span className="zodiac-type-text gemini">
                     {sign.symbol}
                   </span>
                 </div>
+                <div className="zodiac-type gemini">
+                  <FaWind size={25} />
+                  <span className="zodiac-type-text gemini">
+                    {sign.element}
+                  </span>
+                </div>
+
                 <div className="zodiac-planet gemini">
                   <img className="zodiac-planet-size" src={images.mercury}/>
                   <span className="zodiac-planet-text gemini">      
@@ -127,7 +127,7 @@ const General = () => {
   return (
     <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
-            <div className="card card-sm gemini-card">
+            {/* <div className="card card-sm gemini-card">
               <h2 className="card-header gemini">Compatibility</h2>
               <p>
                 {sign.compatibility.substring(31).slice(0, -193).split(',').map((substring, idx) => {
@@ -139,11 +139,11 @@ const General = () => {
                   )
                 })}
               </p>
-            </div>
+            </div> */}
             <div className="card card-sm gemini-card">
               <h2 className="card-header gemini">Strengths</h2>
               <p>
-                {sign.strengths.slice(0, -45).split(',').map((substring, idx) => {
+                {sign.strengths.slice().split(',').map((substring, idx) => {
                   return (
                     <div key={idx}>
                       <span>{substring}</span>

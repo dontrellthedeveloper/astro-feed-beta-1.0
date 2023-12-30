@@ -49,7 +49,7 @@ const Aries = () => {
               </p>
               <h2 className="zodiac-name aries">{sign.name}</h2> */}
               {/* <p className="zodiac-date aries">{sign.date_range}</p> */}
-              <div className="zodiac-type-container">
+              <div className="zodiac-type-container aries">
             
                 <TbZodiacAries className="aries-symbol" size={20} />
                 <div className="zodiac-type aries" style={{backgroundColor: '#FC1503', cursor:'default'}}>
@@ -58,17 +58,18 @@ const Aries = () => {
                   </span>
                 </div>
                 <div className="zodiac-type aries">
-                  <FaFireAlt size={25} />
-                  <span className="zodiac-type-text aries">
-                    {sign.element}
-                  </span>
-                </div>
-                <div className="zodiac-type aries">
                   <GiRam size={25} />
                   <span className="zodiac-type-text aries">
                     {sign.symbol}
                   </span>
                 </div>
+                <div className="zodiac-type aries">
+                  <FaFireAlt size={25} />
+                  <span className="zodiac-type-text aries">
+                    {sign.element}
+                  </span>
+                </div>
+
                 <div className="zodiac-planet aries">
                   <img className="zodiac-planet-size" src={images.mars}/>
                   <span className="zodiac-planet-text aries">      
@@ -126,7 +127,7 @@ const General = () => {
   return (
     <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
-            <div className="card card-sm aries-card">
+            {/* <div className="card card-sm aries-card">
               <h2 className="card-header aries">Compatibility</h2>
               <p>
                 {sign.compatibility.substring(25).split(',').map((substring, idx) => {
@@ -138,7 +139,7 @@ const General = () => {
                   )
                 })}
               </p>
-            </div>
+            </div> */}
             <div className="card card-sm aries-card">
               <h2 className="card-header aries">Strengths</h2>
               <p>
