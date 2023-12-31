@@ -7,6 +7,7 @@ import { render } from 'react-dom';
 import { fetchAries } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
+import { useParams } from "react-router-dom";
 
 
 import { TbZodiacAries } from "react-icons/tb";
@@ -17,11 +18,14 @@ import { BsCalendarDate } from "react-icons/bs";
 import { MdDateRange } from "react-icons/md";
 import './Signs.css'
 import {images} from '../../constants';
+import { Link } from "react-router-dom";
+import {AriesAriesCompatibility, AriesCancerCompatibility, AriesGeminiCompatibility, AriesLeoCompatibility, AriesLibraCompatibility, AriesScorpioCompatibility, AriesTaurusCompatibility, AriesVirgoCompatibility} from "./Aries/AriesCompatibility";
 
-
+import { HiPlusSm } from "react-icons/hi";
 
 const Aries = () => {
 
+    const params = useParams();
     const [videos, setVideos] = useState(null);
     const [sign, setSign] = useState('');
     const [selectedCategory, setSelectedCategory] = useState("");
@@ -89,16 +93,61 @@ const Aries = () => {
             <Tabs
               config={[
                 {header: "General", component: <General/>},   
+                {header: "Compatilibility", component: <Compatibility/>},
                 {header: "About", component: <About/>},   
                 {header: "Women", component: <Women/>},
                 {header: "Men", component: <Men/>},
                 {header: "Love", component: <Love/>}, 
                 {header: "Relationships", component: <Relationships/>},
-                // {header: "Career", component: <Career/>},
-                {header: "Nature", component: <Nature/>},
-                {header: "Health", component: <Health/>},
+                {header: "Career", component: <Career/>},
+                // {header: "Nature", component: <Nature/>},
+                // {header: "Health", component: <Health/>},
               ]}
             />
+            {/* <div style={{padding: '100px'}}> */}
+            {/* <div className="card-s">
+              <div className="card aries-card">
+                <h2 style={{textAlign: 'center'}} className="card-header aries aries-card-detail"> Compatibility</h2>
+                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px'}}>
+                  <div>
+                    <Link to={`/aries/aries`}>
+                    <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
+                      </Link>
+                      <p className='compatibility-p'>Aries</p>
+                  </div>
+                  <div>
+                    <HiPlusSm size={30} />
+                  </div>
+                  <div>
+                    <Link to={`/aries/aries`}>
+                    <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
+                      </Link>
+                      <p className='compatibility-p'>Aries</p>
+                  </div>
+                </div>
+                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 20px 40px'}}>
+                  <AriesAriesCompatibility/>
+                  <AriesTaurusCompatibility/>
+                  <AriesGeminiCompatibility/>
+                  <AriesCancerCompatibility/>    
+                </div>
+                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px'}}>
+                  <AriesAriesCompatibility/>
+                  <AriesTaurusCompatibility/>
+                  <AriesGeminiCompatibility/>
+                  <AriesCancerCompatibility/>    
+                </div>
+                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 50px 40px'}}>
+                  <AriesAriesCompatibility/>
+                  <AriesTaurusCompatibility/>
+                  <AriesGeminiCompatibility/>
+                  <AriesCancerCompatibility/>    
+                </div>
+              </div>
+            </div> */}
+
+            {/* </div> */}
+
         </div>
       </div>
 
@@ -106,6 +155,66 @@ const Aries = () => {
 
   );
 };
+
+const Compatibility = () => {
+  const [sign, setSign] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("");
+  useEffect(() => {
+
+      fetchAries()
+        .then((data) => setSign(data))
+        console.log(sign)
+      }, [selectedCategory]);
+
+      if(!sign) return (
+        <div className="preloader">
+            <div className="status">...</div>
+        </div>
+      )  
+
+  return (
+    <div className="card-s">
+    <div className="card aries-card">
+      <h2 style={{textAlign: 'center'}} className="card-header aries aries-card-detail"> Compatibility</h2>
+      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px', margin: '0 auto'}}>
+        <div>
+          <Link to={`/aries/aries`}>
+          <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
+            </Link>
+            <p className='compatibility-p'>Aries</p>
+        </div>
+        <div>
+          <HiPlusSm size={30} />
+        </div>
+        <div>
+          <Link to={`/aries/aries`}>
+          <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
+            </Link>
+            <p className='compatibility-p'>Aries</p>
+        </div>
+      </div>
+      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 20px 40px'}}>
+        <AriesAriesCompatibility/>
+        <AriesTaurusCompatibility/>
+        <AriesGeminiCompatibility/>
+        <AriesCancerCompatibility/>    
+      </div>
+      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px'}}>
+        <AriesLeoCompatibility/>
+        <AriesVirgoCompatibility/>
+        <AriesLibraCompatibility/>
+        <AriesScorpioCompatibility/>    
+      </div>
+      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 50px 40px'}}>
+        <AriesAriesCompatibility/>
+        <AriesTaurusCompatibility/>
+        <AriesGeminiCompatibility/>
+        <AriesCancerCompatibility/>    
+      </div>
+    </div>
+  </div>
+  )
+}
 
 
 const General = () => {
@@ -169,11 +278,8 @@ const General = () => {
             </div>
 
 
-          </div>
 
-      {/* <h2>Compatibility</h2>
-      <p>{sign.compatibility}</p> */}
-      {/* <h2>Ruling Planet</h2> */}
+          </div>
 
 
     </>
@@ -208,7 +314,7 @@ const About = () => {
   )
 }
 
-const Compatibility = () => {
+const Compatibility2 = () => {
 
   const [sign, setSign] = useState('');
   const [selectedCategory, setSelectedCategory] = useState("");

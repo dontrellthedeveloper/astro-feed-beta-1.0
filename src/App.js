@@ -15,6 +15,7 @@ import Sagittarius from "./components/Signs/Sagittarius";
 import Capricorn from "./components/Signs/Capricorn";
 import Aquarius from "./components/Signs/Aquarius";
 import Pisces from "./components/Signs/Pisces";
+import {AriesAriesCompatibility, AriesCancerCompatibility, AriesGeminiCompatibility, AriesTaurusCompatibility} from "./components/Signs/Aries/AriesCompatibility";
 
 
 const App = () => {
@@ -61,6 +62,10 @@ return (
                   <Route path='/capricorn' element={<Capricorn />} />
                   <Route path='/aquarius' element={<Aquarius />} />
                   <Route path='/pisces' element={<Pisces />} />
+                  <Route path='/aries/:id' element={<AriesAriesCompatibility />} />
+                  <Route path='/aries/:id' element={<AriesTaurusCompatibility />} />
+                  <Route path='/aries/:id' element={<AriesGeminiCompatibility />} />
+                  <Route path='/aries/:id' element={<AriesCancerCompatibility />} />
                   <Route path='/sign?s=:id' element={<Feed />} />
                   <Route path='/video/:id' element={<VideoDetail />} />
                   <Route path='/channel/:id' element={<ChannelDetail />} />

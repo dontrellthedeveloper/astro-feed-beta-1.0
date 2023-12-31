@@ -132,7 +132,7 @@ const General = () => {
   return (
     <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
-            <div className="card card-sm aries-card">
+            {/* <div className="card card-sm aries-card">
               <h2 className="card-header aries">Compatibility</h2>
               <p>
                 {sign.compatibility.substring().split(',').map((substring, idx) => {
@@ -144,7 +144,7 @@ const General = () => {
                   )
                 })}
               </p>
-            </div>
+            </div> */}
             <div className="card card-sm aries-card">
               <h2 className="card-header aries">Strengths</h2>
               <p>
