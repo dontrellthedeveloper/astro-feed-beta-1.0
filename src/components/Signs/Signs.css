@@ -67,6 +67,11 @@
     color: #fff;
     text-align: center;
 }
+
+.aries-symbol.aries:hover {
+    background-color: #7e0a02;
+}
+
 .taurus-symbol {
     border-radius: 50%;
     border: 2px solid #203c16;

@@ -15,7 +15,7 @@ import Sagittarius from "./components/Signs/Sagittarius";
 import Capricorn from "./components/Signs/Capricorn";
 import Aquarius from "./components/Signs/Aquarius";
 import Pisces from "./components/Signs/Pisces";
-import {AriesAriesCompatibility, AriesCancerCompatibility, AriesGeminiCompatibility, AriesTaurusCompatibility} from "./components/Signs/Aries/AriesCompatibility";
+import {AriesAriesCompatibility, AriesCancerCompatibility, AriesCompatibility, AriesGeminiCompatibility, AriesTaurusCompatibility} from "./components/Signs/Aries/AriesCompatibility";
 
 
 const App = () => {
@@ -51,7 +51,9 @@ return (
               <Routes>
                   <Route exact path='/' element={<Feed />} />
                   <Route path='/aries' element={<Aries />} />
+                  <Route path='/aries/:id' element={<AriesCompatibility />} />
                   <Route path='/taurus' element={<Taurus />} />
+                  {/* <Route path='/taurus/:id' element={<TaurusCompatibility />} /> */}
                   <Route path='/gemini' element={<Gemini />} />
                   <Route path='/cancer' element={<Cancer />} />
                   <Route path='/leo' element={<Leo />} />
@@ -62,10 +64,10 @@ return (
                   <Route path='/capricorn' element={<Capricorn />} />
                   <Route path='/aquarius' element={<Aquarius />} />
                   <Route path='/pisces' element={<Pisces />} />
-                  <Route path='/aries/:id' element={<AriesAriesCompatibility />} />
-                  <Route path='/aries/:id' element={<AriesTaurusCompatibility />} />
+
+                  {/* <Route path='/aries/:id' element={<AriesTaurusCompatibility />} />
                   <Route path='/aries/:id' element={<AriesGeminiCompatibility />} />
-                  <Route path='/aries/:id' element={<AriesCancerCompatibility />} />
+                  <Route path='/aries/:id' element={<AriesCancerCompatibility />} /> */}
                   <Route path='/sign?s=:id' element={<Feed />} />
                   <Route path='/video/:id' element={<VideoDetail />} />
                   <Route path='/channel/:id' element={<ChannelDetail />} />

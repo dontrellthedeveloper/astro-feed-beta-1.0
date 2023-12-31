@@ -2,12 +2,12 @@ import React, { useEffect, useState } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { Sidebar, Videos } from "./../";
 import { render } from 'react-dom';
-
+import { useNavigate } from "react-router-dom";
 
 import { fetchAries } from "../../utils/fetchFromAPI";
 
 import { categories } from "../../utils/constants";
-import { useParams } from "react-router-dom";
+import { useParams, createSearchParams } from "react-router-dom";
 
 
 import { TbZodiacAries } from "react-icons/tb";
@@ -19,11 +19,13 @@ import { MdDateRange } from "react-icons/md";
 import './Signs.css'
 import {images} from '../../constants';
 import { Link } from "react-router-dom";
-import {AriesAriesCompatibility, AriesCancerCompatibility, AriesGeminiCompatibility, AriesLeoCompatibility, AriesLibraCompatibility, AriesScorpioCompatibility, AriesTaurusCompatibility, AriesVirgoCompatibility} from "./Aries/AriesCompatibility";
+import {AriesCompatibility} from "./Aries/AriesCompatibility";
 
 import { HiPlusSm } from "react-icons/hi";
 
+
 const Aries = () => {
+  
 
     const params = useParams();
     const [videos, setVideos] = useState(null);
@@ -31,16 +33,17 @@ const Aries = () => {
     const [selectedCategory, setSelectedCategory] = useState("");
     useEffect(() => {
 
-        fetchAries()
-          .then((data) => setSign(data))
-          console.log(sign)
-        }, [selectedCategory]);
+    fetchAries()
+      .then((data) => setSign(data))
+      console.log(sign)
+    }, [selectedCategory]);
 
-        if(!sign) return (
-          <div className="preloader">
-              <div className="status">...</div>
-          </div>
-        )  
+    if(!sign) return (
+      <div className="preloader">
+          <div className="status">...</div>
+      </div>
+    )  
+
 
 
   return (
@@ -108,11 +111,11 @@ const Aries = () => {
             {/* <div className="card-s">
               <div className="card aries-card">
                 <h2 style={{textAlign: 'center'}} className="card-header aries aries-card-detail"> Compatibility</h2>
-                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px'}}>
+                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px', margin: '0 auto'}}>
                   <div>
-                    <Link to={`/aries/aries`}>
+                    <>
                     <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
-                      </Link>
+                      </>
                       <p className='compatibility-p'>Aries</p>
                   </div>
                   <div>
@@ -126,25 +129,17 @@ const Aries = () => {
                   </div>
                 </div>
                 <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 20px 40px'}}>
-                  <AriesAriesCompatibility/>
-                  <AriesTaurusCompatibility/>
-                  <AriesGeminiCompatibility/>
-                  <AriesCancerCompatibility/>    
+
                 </div>
                 <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px'}}>
-                  <AriesAriesCompatibility/>
-                  <AriesTaurusCompatibility/>
-                  <AriesGeminiCompatibility/>
-                  <AriesCancerCompatibility/>    
+
                 </div>
                 <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 50px 40px'}}>
-                  <AriesAriesCompatibility/>
-                  <AriesTaurusCompatibility/>
-                  <AriesGeminiCompatibility/>
-                  <AriesCancerCompatibility/>    
+
                 </div>
-              </div>
+            </div>
             </div> */}
+            {/* <AriesCompatibility/> */}
 
             {/* </div> */}
 
@@ -159,60 +154,28 @@ const Aries = () => {
 const Compatibility = () => {
   const [sign, setSign] = useState('');
   const [selectedCategory, setSelectedCategory] = useState("");
-  useEffect(() => {
 
+
+
+  useEffect(() => {
       fetchAries()
         .then((data) => setSign(data))
         console.log(sign)
-      }, [selectedCategory]);
+  }, [selectedCategory]);
 
-      if(!sign) return (
-        <div className="preloader">
-            <div className="status">...</div>
-        </div>
-      )  
+
+  if(!sign) return (
+    <div className="preloader">
+        <div className="status">...</div>
+    </div>
+  )  
+
+
 
   return (
-    <div className="card-s">
-    <div className="card aries-card">
-      <h2 style={{textAlign: 'center'}} className="card-header aries aries-card-detail"> Compatibility</h2>
-      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px', margin: '0 auto'}}>
-        <div>
-          <Link to={`/aries/aries`}>
-          <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
-            </Link>
-            <p className='compatibility-p'>Aries</p>
-        </div>
-        <div>
-          <HiPlusSm size={30} />
-        </div>
-        <div>
-          <Link to={`/aries/aries`}>
-          <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
-            </Link>
-            <p className='compatibility-p'>Aries</p>
-        </div>
-      </div>
-      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 20px 40px'}}>
-        <AriesAriesCompatibility/>
-        <AriesTaurusCompatibility/>
-        <AriesGeminiCompatibility/>
-        <AriesCancerCompatibility/>    
-      </div>
-      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px'}}>
-        <AriesLeoCompatibility/>
-        <AriesVirgoCompatibility/>
-        <AriesLibraCompatibility/>
-        <AriesScorpioCompatibility/>    
-      </div>
-      <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 50px 40px'}}>
-        <AriesAriesCompatibility/>
-        <AriesTaurusCompatibility/>
-        <AriesGeminiCompatibility/>
-        <AriesCancerCompatibility/>    
-      </div>
-    </div>
-  </div>
+    <>
+      <AriesCompatibility/>
+    </>
   )
 }
 
