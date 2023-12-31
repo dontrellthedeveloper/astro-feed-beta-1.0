@@ -30,6 +30,11 @@
     background-size: cover;
 }
 
+.main--s.cancer {
+    background: url("../../assets/cancer-bg.png") no-repeat fixed center;
+    background-size: cover;
+}
+
 
 .main--s .main--s2 {
     background: rgba(0,0,0,0.8);
@@ -59,6 +64,8 @@
 .header-symbol-container {
     text-align: center;
 }
+
+
 .aries-symbol {
     border-radius: 50%;
     border: 2px solid #7e0a02;
@@ -67,15 +74,28 @@
     color: #fff;
     text-align: center;
 }
-
+.aries-symbol.aries-symbol-sm {
+    background-color: #fff3f2;
+    color: #7e0a02;
+} 
 .aries-symbol.aries:hover {
-    background-color: #7e0a02;
+    background-color: #FC1503;
+    color: #fff;
 }
+
 
 .taurus-symbol {
     border-radius: 50%;
     border: 2px solid #203c16;
     padding: 10px;
+    background-color: #65bb45;
+    color: #fff;
+}
+.taurus-symbol.taurus-symbol-sm {
+    background-color: #f0f8ec;
+    color: #203c16;
+} 
+.taurus-symbol.taurus:hover {
     background-color: #65bb45;
     color: #fff;
 }
@@ -86,6 +106,30 @@
     padding: 10px;
     background-color: #F9BC04;
     color: #896702;
+}
+.gemini-symbol.gemini-symbol-sm {
+    background-color: #fff8e6;
+    color: #896702;
+} 
+.gemini-symbol.gemini:hover {
+    background-color: #F9BC04;
+    color: #fff;
+}
+
+.cancer-symbol {
+    border-radius: 50%;
+    border: 2px solid #5c5954;
+    padding: 10px;
+    background-color: #DDDCDA;
+    color: #5c5954;
+}
+.cancer-symbol.cancer-symbol-sm {
+    background-color: #f1f1f0;
+    color: #5c5954;
+} 
+.cancer-symbol.cancer:hover {
+    background-color: #DDDCDA;
+    color: #5c5954;
 }
 
 /* Zodiac Name */
@@ -105,6 +149,10 @@
     color: #4b3801;
 }
 
+.zodiac-name.cancer {
+    color: #5c5954;
+}
+
 /* Zodiac Date Range */
 .zodiac-date {
     text-align: center;
@@ -121,6 +169,10 @@
 
 .zodiac-date.gemini {
     color: #896702;
+}
+
+.zodiac-date.cancer {
+    color: #5c5954;
 }
 
 /* Zodiac Type */
@@ -211,6 +263,18 @@
     color: #fff;
 }
 
+.zodiac-type.cancer {
+    color: #5c5954;
+    border: 2px solid #5c5954;
+    background-color: #f1f1f0;
+}
+.zodiac-type.cancer:hover {
+    cursor: pointer;
+    background-color: #5c5954;
+    border: 2px solid #5c5954;
+    color: #fff;
+}
+
 
 .zodiac-type-text {
     padding-left: 6px;
@@ -231,6 +295,11 @@
     color: #644b02;
 }
 
+.zodiac-type-text.cancer {
+    color: #5c5954;
+}
+
+
 .zodiac-type.aries:hover .zodiac-type-text.aries {
     color: #fff;
 }
@@ -238,6 +307,10 @@
     color: #fff;
 }
 .zodiac-type.gemini:hover .zodiac-type-text.gemini {
+    color: #fff;
+}
+
+.zodiac-type.cancer:hover .zodiac-type-text.cancer {
     color: #fff;
 }
 
@@ -293,6 +366,19 @@
     color: #fff;
 }
 
+.zodiac-planet.cancer {
+    color: #5c5954;
+    border: 2px solid #5c5954;
+    background-color: #f1f1f0;
+}
+
+.zodiac-planet.cancer:hover {
+    cursor: pointer;
+    background-color: #5c5954;
+    border: 2px solid #5c5954;
+    color: #fff;
+}
+
 .zodiac-planet-text {
     padding-left: 6px;
     font-weight: 800;
@@ -310,6 +396,10 @@
     color: #644b02;
 }
 
+.zodiac-planet-text.cancer {
+    color: #5c5954;
+}
+
 .zodiac-planet.aries:hover .zodiac-planet-text.aries {
     color: #fff;
 }
@@ -317,6 +407,10 @@
     color: #fff;
 }
 .zodiac-planet.gemini:hover .zodiac-planet-text.gemini {
+    color: #fff;
+}
+
+.zodiac-planet.cancer:hover .zodiac-planet-text.cancer {
     color: #fff;
 }
 
@@ -346,6 +440,10 @@
     border-bottom: 2px solid #7c5e02;
 }
 
+.tab .tab-headers.cancer {
+    border-bottom: 2px solid #5c5954;
+}
+
 
 
 .tab .tab-headers .tab-header {
@@ -366,6 +464,9 @@
 }
 .tab .tab-headers .tab-header.gemini {
     color: #7c5e02;
+}
+.tab .tab-headers .tab-header.cancer {
+    color: #5c5954;
 }
 .tab .tab-headers .tab-header:before {
     content: "";
@@ -405,14 +506,17 @@
 
 .aries-card-detail {
     position: relative;
+    text-align: center;
 }
 
 .taurus-card-detail {
     position: relative;
+    text-align: center;
 }
 
 .gemini-card-detail {
     position: relative;
+    text-align: center;
 }
 
 
@@ -449,6 +553,17 @@
     background: #F9BC04;
 }
 
+.cancer-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #DDDCDA;
+}
+
 .cards-s .card .card-header.aries:before {
     background: #FC1503;
 }
@@ -461,6 +576,10 @@
     background: #F9BC04;
 }
 
+.cards-s .card .card-header.cancer:before {
+    background: #DDDCDA;
+}
+
 
 .tab .tab-headers .tab-header.aries:before {
     background: #7e0a02;
@@ -470,6 +589,10 @@
 }
 .tab .tab-headers .tab-header.gemini:before {
     background: #7c5e02;
+}
+
+.tab .tab-headers .tab-header.cancer:before {
+    background: #5c5954;
 }
 
 
@@ -506,6 +629,15 @@
     border-radius: 10px 10px 0px 0px;
 }
 
+.tab .tab-headers .tab-header.cancer.active {
+    color: #5c5954;
+    border: 2px solid #5c5954;
+    box-shadow: 0px 2px 0px #f1f1f0;
+    border-bottom: 2px solid #f1f1f0;
+    background-color: #f1f1f0;
+    border-radius: 10px 10px 0px 0px;
+}
+
 
 
 .tab .tab-headers .tab-header.active::before {
@@ -520,6 +652,9 @@
 }
 .tab .tab-headers .tab-header.gemini.active::before {
     background: #7c5e02;
+}
+.tab .tab-headers .tab-header.cancer.active::before {
+    background: #5c5954;
 }
 .tab .tab-body {
     padding: 30px 20px;
@@ -538,6 +673,11 @@
 .tab .tab-body.gemini {
     border-bottom: 2px solid #7c5e02;
     background-color: #fff8e6;
+}
+
+.tab .tab-body.cancer {
+    border-bottom: 2px solid #5c5954;
+    background-color: #f1f1f0;
 }
 
 .cards-s {
@@ -567,12 +707,7 @@
     padding-right: 30px;
 }
 
-.compatibility-p {
-    font-size: 16.5px;
-    font-weight: 600;
-    text-transform: capitalize;
-    color: #7e0a02; 
-}
+
 
 
 
@@ -607,6 +742,12 @@
     margin: 30px auto;
 }
 
+.cancer-card {
+    color: #5c5954; 
+    border: 2px solid #5c5954;
+    max-width: 600px;
+    margin: 30px auto;
+}
 
 
 
@@ -626,6 +767,11 @@
 .tab .tab-body.gemini > h2 {
     color: #7c5e02;
 }
+
+.tab .tab-body.cancer > h2 {
+    color: #5c5954;
+}
+
 
 .tab .tab-body > p {
     color: #7e0a02;
@@ -650,3 +796,93 @@
     color: #7c5e02;
 }
 
+.tab .tab-body.cancer > p {
+    color: #5c5954;
+}
+
+
+
+
+/* Compatibility */
+
+.compatibility-main {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 40px 40px 20px 40px;
+    max-width: 300px;
+    margin: 0 auto;
+    align-items: baseline;
+}
+
+.compatibility-first-row {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 10px 40px 20px 40px;
+}
+
+.compatibility-second-row {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 10px 40px;
+}
+
+.compatibility-third-row {
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    padding: 10px 40px 50px 40px;
+}
+
+.compatibility-select {
+    cursor: pointer;
+}
+
+.comp-sign {
+    width: 80px;
+}
+
+
+.question-mark.aries {
+    background-color: #fff3f2;
+    color: #7e0a02;
+}
+
+.question-mark.taurus {
+    background-color: #f0f8ec;
+    color: #203c16;
+}
+
+.question-mark.gemini {
+    background-color: #fff8e6;
+    color: #7c5e02;
+}
+
+.question-mark.cancer {
+    background-color: #f1f1f0;
+    color: #5c5954;
+}
+
+.compatibility-p {
+    font-size: 16.5px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.compatibility-p.aries {
+    color: #7e0a02; 
+}
+
+.compatibility-p.taurus {
+    color: #203c16; 
+}
+
+.compatibility-p.gemini {
+    color: #7c5e02; 
+}
+
+.compatibility-p.cancer {
+    color: #5c5954; 
+}

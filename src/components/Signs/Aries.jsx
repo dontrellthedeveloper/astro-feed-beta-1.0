@@ -95,8 +95,8 @@ const Aries = () => {
             </div>
             <Tabs
               config={[
-                {header: "General", component: <General/>},   
                 {header: "Compatilibility", component: <Compatibility/>},
+                {header: "General", component: <General/>},   
                 {header: "About", component: <About/>},   
                 {header: "Women", component: <Women/>},
                 {header: "Men", component: <Men/>},

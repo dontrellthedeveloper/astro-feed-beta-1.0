@@ -15,7 +15,8 @@ import Sagittarius from "./components/Signs/Sagittarius";
 import Capricorn from "./components/Signs/Capricorn";
 import Aquarius from "./components/Signs/Aquarius";
 import Pisces from "./components/Signs/Pisces";
-import {AriesAriesCompatibility, AriesCancerCompatibility, AriesCompatibility, AriesGeminiCompatibility, AriesTaurusCompatibility} from "./components/Signs/Aries/AriesCompatibility";
+import {AriesCompatibility} from "./components/Signs/Aries/AriesCompatibility";
+import { TaurusCompatibility } from "./components/Signs/Taurus/TaurusCompatibility";
 
 
 const App = () => {
@@ -53,7 +54,7 @@ return (
                   <Route path='/aries' element={<Aries />} />
                   <Route path='/aries/:id' element={<AriesCompatibility />} />
                   <Route path='/taurus' element={<Taurus />} />
-                  {/* <Route path='/taurus/:id' element={<TaurusCompatibility />} /> */}
+                  <Route path='/taurus/:id' element={<TaurusCompatibility />} />
                   <Route path='/gemini' element={<Gemini />} />
                   <Route path='/cancer' element={<Cancer />} />
                   <Route path='/leo' element={<Leo />} />

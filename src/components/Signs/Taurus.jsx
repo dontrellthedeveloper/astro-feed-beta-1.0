@@ -19,6 +19,7 @@ import {images} from '../../constants';
 import { MdDateRange } from "react-icons/md";
 import { GiRam } from "react-icons/gi";
 import { GiBullHorns } from "react-icons/gi";
+import { TaurusCompatibility } from "./Taurus/TaurusCompatibility";
 
 
 const Taurus = () => {
@@ -88,14 +89,15 @@ const Taurus = () => {
             <Tabs
               config={[
                 {header: "General", component: <General/>},   
+                {header: "Compatilibility", component: <Compatibility/>},
                 {header: "About", component: <About/>},   
                 {header: "Women", component: <Women/>},
                 {header: "Men", component: <Men/>},
                 {header: "Love", component: <Love/>}, 
                 {header: "Relationships", component: <Relationships/>},
-                // {header: "Career", component: <Career/>},
-                {header: "Nature", component: <Nature/>},
-                {header: "Health", component: <Health/>},
+                {header: "Career", component: <Career/>},
+                // {header: "Nature", component: <Nature/>},
+                // {header: "Health", component: <Health/>},
               ]}
             />
         </div>
@@ -208,38 +210,29 @@ const About = () => {
 }
 
 const Compatibility = () => {
-
   const [sign, setSign] = useState('');
   const [selectedCategory, setSelectedCategory] = useState("");
-  useEffect(() => {
 
-    fetchTaurus()
+
+
+  useEffect(() => {
+      fetchTaurus()
         .then((data) => setSign(data))
         console.log(sign)
-      }, [selectedCategory]);
+  }, [selectedCategory]);
 
-      if(!sign) return (
-        <div className="preloader">
-            <div className="status">...</div>
-        </div>
-      )  
+
+  if(!sign) return (
+    <div className="preloader">
+        <div className="status">...</div>
+    </div>
+  )  
+
+
 
   return (
     <>
-      <h2>Compatibility</h2>
-      <div>
-          <h2>Compatibility</h2>
-          <p>
-            {sign.compatibility.substring(25).split(',').map((substring, idx) => {
-              return (
-                <div key={idx}>
-                  <span>{substring}</span>
-                  <br/>
-                </div>
-              )
-            })}
-          </p>
-        </div>
+      <TaurusCompatibility/>
     </>
   )
 }
