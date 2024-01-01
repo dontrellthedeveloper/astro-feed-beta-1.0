@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+body {
+  overflow-y: scroll; /* Show vertical scrollbar */
+  overflow-x: scroll; /* Show horizontal scrollbar */
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;

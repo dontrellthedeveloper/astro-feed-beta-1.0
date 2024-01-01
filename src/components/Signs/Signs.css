@@ -1,3 +1,39 @@
+/* ::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+
+  ::-webkit-scrollbar-thumb {
+    background: #888;
+  }
+  
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  } */
+
+
+
+   ::-webkit-scrollbar {
+  width: 5px;
+  /* height: 2px; */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 40px;
+  height: 100px;
+} 
+
+.comp-text.aries::-webkit-scrollbar-thumb {
+    background-color: #ebbdb9;
+}
+
 /*  Main Background  */
 
 .main--s {
@@ -35,6 +71,11 @@
     background-size: cover;
 }
 
+.main--s.leo {
+    background: url("../../assets/leo-bg.png") no-repeat fixed center;
+    background-size: cover;
+}
+
 
 .main--s .main--s2 {
     background: rgba(0,0,0,0.8);
@@ -45,7 +86,8 @@
 /* Main Content */
 
 .main-content {
-    max-width: 800px;
+    /* max-width: 800px; */
+    max-width: 600px;
     margin: 0 auto;
     background-color: #fff;
     height: 100%;
@@ -54,8 +96,15 @@
 
 /* Main Header */
 .main-header {
-    padding-bottom: 30px;
-    padding-top: 30px;
+    padding-bottom: 20px;
+    padding-top: 15px;
+    margin-bottom: 30px;
+
+    z-index: 1000;
+    position: sticky;
+    top: 0;
+    background: #fff;
+    /* border-bottom: 2px solid #000; */
 }
 
 
@@ -70,7 +119,9 @@
     border-radius: 50%;
     border: 2px solid #7e0a02;
     padding: 10px;
-    background-color: #FC1503;
+    /* background-color: #FC1503; */
+    background-color: #b10c00;
+    /* color: #eea49b; */
     color: #fff;
     text-align: center;
 }
@@ -79,7 +130,10 @@
     color: #7e0a02;
 } 
 .aries-symbol.aries:hover {
-    background-color: #FC1503;
+    /* background-color: #FC1503;
+    color: #fff; */
+    background-color: #b10c00;
+    /* color: #f1c2bd; */
     color: #fff;
 }
 
@@ -90,47 +144,78 @@
     padding: 10px;
     background-color: #65bb45;
     color: #fff;
+    background-color: #468130;
+    /* color: #b2c4ab; */
+    color: #fff;
 }
 .taurus-symbol.taurus-symbol-sm {
     background-color: #f0f8ec;
     color: #203c16;
 } 
 .taurus-symbol.taurus:hover {
-    background-color: #65bb45;
+    background-color: #468130;
     color: #fff;
 }
 
+
 .gemini-symbol {
     border-radius: 50%;
-    border: 2px solid #896702;
+    border: 2px solid #614901;
     padding: 10px;
-    background-color: #F9BC04;
-    color: #896702;
+    /* background-color: #F9BC04;
+    color: #896702; */
+    background-color: #a17a04;
+    /* color: #efd27c; */
+    color: #fff;
 }
 .gemini-symbol.gemini-symbol-sm {
     background-color: #fff8e6;
     color: #896702;
 } 
 .gemini-symbol.gemini:hover {
-    background-color: #F9BC04;
-    color: #fff;
+    background-color: #896702;
+    color: #efd27c;
 }
+
 
 .cancer-symbol {
     border-radius: 50%;
     border: 2px solid #5c5954;
     padding: 10px;
-    background-color: #DDDCDA;
-    color: #5c5954;
+    /* background-color: #DDDCDA;
+    color: #5c5954; */
+    background-color: #5c5954;
+    /* color: #DDDCDA; */
+    color: #fff;
 }
 .cancer-symbol.cancer-symbol-sm {
     background-color: #f1f1f0;
     color: #5c5954;
 } 
 .cancer-symbol.cancer:hover {
-    background-color: #DDDCDA;
-    color: #5c5954;
+    background-color: #5c5954;
+    color: #DDDCDA;
 }
+
+
+.leo-symbol {
+    border-radius: 50%;
+    border: 2px solid #847017;
+    padding: 10px;
+    /* background-color: #EDDD96;
+    color: #847017; */
+    background-color: #ab9326;
+    color: #fff;
+}
+.leo-symbol.leo-symbol-sm {
+    background-color: #fdfcf4;
+    color: #847017;
+} 
+.leo-symbol.leo:hover {
+    background-color: #847017;
+    color: #fff;
+}
+
 
 /* Zodiac Name */
 .zodiac-name {
@@ -153,6 +238,11 @@
     color: #5c5954;
 }
 
+.zodiac-name.leo {
+    color: #847017;
+}v
+
+
 /* Zodiac Date Range */
 .zodiac-date {
     text-align: center;
@@ -173,6 +263,10 @@
 
 .zodiac-date.cancer {
     color: #5c5954;
+}
+
+.zodiac-date.leo {
+    color: #847017;
 }
 
 /* Zodiac Type */
@@ -276,6 +370,18 @@
 }
 
 
+.zodiac-type.leo {
+    color: #847017;
+    border: 2px solid #847017;
+    background-color: #fcfaef;
+}
+.zodiac-type.leo:hover {
+    cursor: pointer;
+    background-color: #847017;
+    border: 2px solid #847017;
+    color: #fff;
+}
+
 .zodiac-type-text {
     padding-left: 6px;
     font-weight: 800;
@@ -299,6 +405,10 @@
     color: #5c5954;
 }
 
+.zodiac-type-text.leo {
+    color: #847017;
+}
+
 
 .zodiac-type.aries:hover .zodiac-type-text.aries {
     color: #fff;
@@ -318,6 +428,10 @@
 .zodiac-planet-size {
     width: 26px;
 }
+.planet-size-comp {
+    width: 65px;
+}
+
 .zodiac-planet {
     text-align: center;
     display: flex;
@@ -379,6 +493,19 @@
     color: #fff;
 }
 
+.zodiac-planet.leo {
+    color: #847017;
+    border: 2px solid #847017;
+    background-color: #fcfaef;
+}
+
+.zodiac-planet.leo:hover {
+    cursor: pointer;
+    background-color: #847017;
+    border: 2px solid #847017;
+    color: #fff;
+}
+
 .zodiac-planet-text {
     padding-left: 6px;
     font-weight: 800;
@@ -400,6 +527,10 @@
     color: #5c5954;
 }
 
+.zodiac-planet-text.leo {
+    color: #847017;
+}
+
 .zodiac-planet.aries:hover .zodiac-planet-text.aries {
     color: #fff;
 }
@@ -411,6 +542,10 @@
 }
 
 .zodiac-planet.cancer:hover .zodiac-planet-text.cancer {
+    color: #fff;
+}
+
+.zodiac-planet.leo:hover .zodiac-planet-text.leo {
     color: #fff;
 }
 
@@ -439,9 +574,11 @@
 .tab .tab-headers.gemini {
     border-bottom: 2px solid #7c5e02;
 }
-
 .tab .tab-headers.cancer {
     border-bottom: 2px solid #5c5954;
+}
+.tab .tab-headers.leo {
+    border-bottom: 2px solid #847017;
 }
 
 
@@ -467,6 +604,10 @@
 }
 .tab .tab-headers .tab-header.cancer {
     color: #5c5954;
+}
+
+.tab .tab-headers .tab-header.leo {
+    color: #847017;
 }
 .tab .tab-headers .tab-header:before {
     content: "";
@@ -519,6 +660,16 @@
     text-align: center;
 }
 
+.cancer-card-detail {
+    position: relative;
+    text-align: center;
+}
+
+.leo-card-detail {
+    position: relative;
+    text-align: center;
+}
+
 
 .aries-card-detail:before {
     content: "";
@@ -564,6 +715,30 @@
     background: #DDDCDA;
 }
 
+.cancer-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #DDDCDA;
+}
+
+.leo-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #EDDD96;
+}
+
+
+
 .cards-s .card .card-header.aries:before {
     background: #FC1503;
 }
@@ -580,6 +755,10 @@
     background: #DDDCDA;
 }
 
+.cards-s .card .card-header.leo:before {
+    background: #EDDD96;
+}
+
 
 .tab .tab-headers .tab-header.aries:before {
     background: #7e0a02;
@@ -594,6 +773,13 @@
 .tab .tab-headers .tab-header.cancer:before {
     background: #5c5954;
 }
+
+.tab .tab-headers .tab-header.leo:before {
+    background: #847017;
+}
+
+
+
 
 
 
@@ -638,6 +824,16 @@
     border-radius: 10px 10px 0px 0px;
 }
 
+.tab .tab-headers .tab-header.leo.active {
+    color: #847017;
+    border: 2px solid #847017;
+    box-shadow: 0px 2px 0px #fcfaef;
+    border-bottom: 2px solid #fcfaef;
+    background-color: #fcfaef;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
 
 
 .tab .tab-headers .tab-header.active::before {
@@ -656,8 +852,14 @@
 .tab .tab-headers .tab-header.cancer.active::before {
     background: #5c5954;
 }
+.tab .tab-headers .tab-header.leo.active::before {
+    background: #847017;
+}
+
+
 .tab .tab-body {
     padding: 30px 20px;
+    /* min-height: 700px; */
 }
 
 .tab .tab-body.aries {
@@ -679,6 +881,11 @@
     border-bottom: 2px solid #5c5954;
     background-color: #f1f1f0;
 }
+.tab .tab-body.leo {
+    border-bottom: 2px solid #847017;
+    background-color: #fcfaef;
+}
+
 
 .cards-s {
     /* margin-top: 40px; */
@@ -692,6 +899,14 @@
     margin-bottom: 40px;
     padding-left: 80px;
     padding-right: 80px;
+    /* max-height: 400px; */
+    max-height: 350px;
+    overflow: scroll;
+    margin-left: 70px;
+    margin-right: 70px;
+    padding-left: 10px;
+    padding-right: 20px;
+    text-align: justify;
 }
 
 .card-sm > p {
@@ -705,6 +920,9 @@
     padding-right: 10px; */
     padding-left: 30px;
     padding-right: 30px;
+    margin-left: 0px;
+    margin-right: 0px;
+    text-align: center;
 }
 
 
@@ -714,18 +932,20 @@
 .card {
     border-radius: 10px 10px 10px 10px;
     background-color: #fff;
+    margin: 10px auto;
+    max-width: 540px;
 }
 
 .card-sm {
     /* width: 200px;  */
-    width: 340px; 
+    /* width: 340px;  */
+    width: 260px; 
 }
 
 .aries-card {
     color: #7e0a02; 
     border: 2px solid #7e0a02;
-    max-width: 600px;
-    margin: 30px auto;
+
 }
 
 .taurus-card {
@@ -749,7 +969,12 @@
     margin: 30px auto;
 }
 
-
+.leo-card {
+    color: #847017; 
+    border: 2px solid #847017;
+    max-width: 600px;
+    margin: 30px auto;
+}
 
 .tab .tab-body > h2 {
     color: #7e0a02;
@@ -770,6 +995,10 @@
 
 .tab .tab-body.cancer > h2 {
     color: #5c5954;
+}
+
+.tab .tab-body.leo > h2 {
+    color: #847017;
 }
 
 
@@ -800,7 +1029,9 @@
     color: #5c5954;
 }
 
-
+.tab .tab-body.leo > p {
+    color: #847017;
+}
 
 
 /* Compatibility */
@@ -865,6 +1096,11 @@
     color: #5c5954;
 }
 
+.question-mark.leo {
+    background-color: #fcfaef;
+    color: #847017;
+}
+
 .compatibility-p {
     font-size: 16.5px;
     font-weight: 600;
@@ -885,4 +1121,8 @@
 
 .compatibility-p.cancer {
     color: #5c5954; 
+}
+
+.compatibility-p.leo {
+    color: #847017; 
 }

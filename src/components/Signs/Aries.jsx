@@ -59,8 +59,12 @@ const Aries = () => {
               <div className="zodiac-type-container aries">
             
                 <TbZodiacAries className="aries-symbol" size={20} />
-                <div className="zodiac-type aries" style={{backgroundColor: '#FC1503', cursor:'default'}}>
-                  <span className="zodiac-type-text aries" style={{color: '#fff'}}>
+                <div className="zodiac-type aries" 
+                // style={{backgroundColor: '#FC1503', cursor:'default'}}
+                >
+                  <span className="zodiac-type-text aries" 
+                  // style={{color: '#fff'}}
+                  >
                     {sign.name}
                   </span>
                 </div>
@@ -107,45 +111,8 @@ const Aries = () => {
                 // {header: "Health", component: <Health/>},
               ]}
             />
-            {/* <div style={{padding: '100px'}}> */}
-            {/* <div className="card-s">
-              <div className="card aries-card">
-                <h2 style={{textAlign: 'center'}} className="card-header aries aries-card-detail"> Compatibility</h2>
-                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '40px 40px 20px 40px', maxWidth: '300px', margin: '0 auto'}}>
-                  <div>
-                    <>
-                    <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
-                      </>
-                      <p className='compatibility-p'>Aries</p>
-                  </div>
-                  <div>
-                    <HiPlusSm size={30} />
-                  </div>
-                  <div>
-                    <Link to={`/aries/aries`}>
-                    <TbZodiacAries style={{cursor: 'pointer'}} className="aries-symbol" size={40} />
-                      </Link>
-                      <p className='compatibility-p'>Aries</p>
-                  </div>
-                </div>
-                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 20px 40px'}}>
-
-                </div>
-                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px'}}>
-
-                </div>
-                <div style={{display: 'flex',justifyContent: 'space-evenly', textAlign: 'center', padding: '10px 40px 50px 40px'}}>
-
-                </div>
-            </div>
-            </div> */}
-            {/* <AriesCompatibility/> */}
-
-            {/* </div> */}
-
         </div>
       </div>
-
     </div>
 
   );
@@ -174,7 +141,39 @@ const Compatibility = () => {
 
   return (
     <>
-      <AriesCompatibility/>
+          <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
+            <div className="card card-sm aries-card">
+              <h2 className="card-header aries">Strengths</h2>
+              <p>
+                {sign.strengths.split(',').map((substring, idx) => {
+                  return (
+                    <div key={idx}>
+                      <span>{substring}</span>
+                      <br/>
+                    </div>
+                  )
+                })}
+              </p>
+            </div>
+
+            <div className="card card-sm aries-card">
+              <h2 className="card-header aries">Weaknesses</h2>
+              <p>
+                {sign.weaknesses.split(',').map((substring, idx) => {
+                  return (
+                    <div key={idx}>
+                      <span>{substring}</span>
+                      <br/>
+                    </div>
+                  )
+                })}
+              </p>
+            </div>
+
+
+
+          </div>
+          <AriesCompatibility/>
     </>
   )
 }
@@ -199,19 +198,6 @@ const General = () => {
   return (
     <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
-            {/* <div className="card card-sm aries-card">
-              <h2 className="card-header aries">Compatibility</h2>
-              <p>
-                {sign.compatibility.substring(25).split(',').map((substring, idx) => {
-                  return (
-                    <div key={idx}>
-                      <span>{substring}</span>
-                      <br/>
-                    </div>
-                  )
-                })}
-              </p>
-            </div> */}
             <div className="card card-sm aries-card">
               <h2 className="card-header aries">Strengths</h2>
               <p>
