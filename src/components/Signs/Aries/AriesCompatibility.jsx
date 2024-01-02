@@ -245,7 +245,7 @@ export function AriesCompatibility() {
                 <div className="card aries-card">
                 <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>Aries & {zodiacSign} Relationship </h2>
 
-                <div className='compatibility-main'>
+                <div className='compatibility-main detail'>
                         <div>
                             <TbZodiacAries className="aries-symbol" size={40} />
                             {/* <p className='compatibility-p aries'>Aries</p> */}
@@ -304,7 +304,8 @@ export function AriesCompatibility() {
             <div className="card-s">
                 <div className="card aries-card">
                 <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
-                    Planets - Mars & 
+                    {/* Planets -  */}
+                    Mars & 
                         {
                             (zodiacSign === 'aries') 
                             ? 
@@ -347,7 +348,7 @@ export function AriesCompatibility() {
                      
                     </h2>
 
-                <div className='compatibility-main'>
+                <div className='compatibility-main detail'>
                         <div className="">
                             <img className="zodiac-planet-size planet-size-comp" src={images.mars}/>
                             <span className="zodiac-planet-text aries">      
@@ -389,7 +390,7 @@ export function AriesCompatibility() {
                                 :
                                 (zodiacSign === 'cancer') ?
                                 <div className="">
-                                    <img className="zodiac-planet-size planet-size-comp" src={images.moon}/>
+                                    <img className="zodiac-planet-size planet-size-comp" style={{width: '75px'}} src={images.moon}/>
                                     <span className="zodiac-planet-text cancer">      
                                         {sign.ruling_planet}
                                     </span>
@@ -397,7 +398,7 @@ export function AriesCompatibility() {
                                 :
                                 (zodiacSign === 'leo') ?
                                 <div className="">
-                                    <img className="zodiac-planet-size planet-size-comp" src={images.sun}/>
+                                    <img className="zodiac-planet-size planet-size-comp" style={{width: '85px'}} src={images.sun}/>
                                     <span className="zodiac-planet-text leo">      
                                         {sign.ruling_planet}
                                     </span>
@@ -482,8 +483,10 @@ export function AriesCompatibility() {
 
             <div className="card-s">
                 <div className="card aries-card">
-                <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>Elements - Fire & {(zodiacSign === 'aries') ? 'Fire':''} </h2>
-                <div className='compatibility-main'>
+                <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
+                {/* Elements -  */}
+                Fire & {(zodiacSign === 'aries') ? 'Fire':''} </h2>
+                <div className='compatibility-main detail'>
                         <div className="">
                             <FaFireAlt className="aries-symbol" size={40} />
 
@@ -543,7 +546,23 @@ export function AriesCompatibility() {
 
             <div className="card-s">
                 <div className="card aries-card">
-                <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>Qualities - Cardinal & {zodiacSign} </h2>
+                    <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
+                    Modalities - Cardinal & {(
+                        zodiacSign === 'aries' ? 'cardinal':  
+                        zodiacSign === 'taurus' ? 'fixed': 
+                        zodiacSign === 'gemini' ? 'mutable': 
+                        zodiacSign === 'cancer' ? 'cardinal': 
+                        zodiacSign === 'leo' ? 'fixed': 
+                        zodiacSign === 'virgo' ? 'mutable': 
+                        zodiacSign === 'libra' ? 'cardinal': 
+                        zodiacSign === 'scorpio' ? 'fixed': 
+                        zodiacSign === 'sagittarius' ? 'mutable': 
+                        zodiacSign === 'capricorn' ? 'cardinal': 
+                        zodiacSign === 'aquarius' ? 'fixed': 
+                        zodiacSign === 'pisces' ? 'mutable': 
+                        ''
+                        )} 
+                    </h2>
                 <div className='compatibility-main'>
                         <div className="">
                             <img className="zodiac-planet-size planet-size-comp" src={images.cardinal}/>
@@ -568,27 +587,83 @@ export function AriesCompatibility() {
                                 </div> 
                                 :
                                 (zodiacSign === 'taurus') ?
-                                <TbZodiacTaurus className="taurus-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.fixed}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div> 
+                                :
                                 (zodiacSign === 'gemini') ?
-                                <TbZodiacGemini className="gemini-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.mutable}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'cancer') ?
-                                <TbZodiacCancer className="cancer-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.cardinal}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'leo') ?
-                                <TbZodiacLeo className="leo-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.fixed}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'virgo') ?
-                                <TbZodiacVirgo className="virgo-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.mutable}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'libra') ?
-                                <TbZodiacLibra className="libra-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.cardinal}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'scorpio') ?
-                                <TbZodiacScorpio className="scorpio-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.fixed}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'sagittarius') ?
-                                <TbZodiacSagittarius className="sagittarius-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.mutable}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'capricorn') ?
-                                <TbZodiacCapricorn className="capricorn-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.cardinal}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'aquarius') ?
-                                <TbZodiacAquarius className="aquarius-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.fixed}/>
+                                    <span className="zodiac-planet-text taurus">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 (zodiacSign === 'pisces') ?
-                                <TbZodiacPisces className="pisces-symbol" size={40} /> :
+                                <div className="">
+                                    <img className="zodiac-planet-size planet-size-comp" src={images.mutable}/>
+                                    <span className="zodiac-planet-text pisces">      
+                                        {sign.ruling_planet}
+                                    </span>
+                                </div>                                 :
                                 <MdOutlineQuestionMark 
                                 className="aries-symbol question-mark aries" 
                                 size={40} 

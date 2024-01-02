@@ -1046,6 +1046,11 @@
     align-items: baseline;
 }
 
+.compatibility-main.detail {
+    align-items: center;
+}
+
+
 .compatibility-first-row {
     display: flex;
     justify-content: space-evenly;
