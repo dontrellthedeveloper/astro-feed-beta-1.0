@@ -8,6 +8,9 @@ import uranus from '../assets/uranus.png'
 import saturn from '../assets/saturn.png';
 import ariesBg from '../assets/aries-bg.png';
 import taurusBg from '../assets/taurus-bg.png';
+import fixed from '../assets/fixed.png';
+import mutable from '../assets/mutable.png';
+import cardinal from '../assets/cardinal.png';
 
 export default {
     mars,
@@ -19,5 +22,8 @@ export default {
     sun,
     jupiter,
     saturn,
-    uranus
+    uranus,
+    fixed,
+    mutable,
+    cardinal
 }
