@@ -43,7 +43,7 @@ const Libra = () => {
 
 
   return (
-    <div className="main--s gemini">
+    <div className="main--s libra">
       <div className="main--s2">
         <div className="main-content">
             <div className="main-header">
@@ -53,34 +53,38 @@ const Libra = () => {
               <h2 className="zodiac-name gemini">{sign.name}</h2>
               <p className="zodiac-date gemini">{sign.date_range}</p> */}
               <div className="zodiac-type-container">
-                <TbZodiacLibra className="gemini-symbol" size={20} />
-                <div className="zodiac-type gemini" style={{backgroundColor: '#F9BC04', cursor:'default'}}>
-                  <span className="zodiac-type-text gemini" style={{color: '#896702'}}>
+                <TbZodiacLibra className="libra-symbol" size={20} />
+                <div className="zodiac-type libra" 
+                // style={{backgroundColor: '#F9BC04', cursor:'default'}}
+                >
+                  <span className="zodiac-type-text libra" 
+                  // style={{color: '#896702'}}
+                  >
                     {sign.name}
                   </span>
                 </div>
-                <div className="zodiac-type gemini">
+                <div className="zodiac-type libra">
                   <FaBalanceScale size={25} />
-                  <span className="zodiac-type-text gemini">
+                  <span className="zodiac-type-text libra">
                     {sign.symbol}
                   </span>
                 </div>
-                <div className="zodiac-type gemini">
+                <div className="zodiac-type libra">
                   <FaWind size={25} />
-                  <span className="zodiac-type-text gemini">
+                  <span className="zodiac-type-text libra">
                     {sign.element}
                   </span>
                 </div>
 
-                <div className="zodiac-planet gemini">
+                <div className="zodiac-planet libra">
                   <img className="zodiac-planet-size" src={images.venus}/>
-                  <span className="zodiac-planet-text gemini">      
+                  <span className="zodiac-planet-text libra">      
                     {sign.ruling_planet}
                   </span>
                 </div>
-                <div className="zodiac-type gemini">
+                <div className="zodiac-type libra">
                   <MdDateRange size={25} />
-                  <span className="zodiac-type-text gemini">
+                  <span className="zodiac-type-text libra">
                     {sign.date_range}
                   </span>
                 </div>
@@ -140,8 +144,8 @@ const General = () => {
                 })}
               </p>
             </div> */}
-            <div className="card card-sm gemini-card">
-              <h2 className="card-header gemini">Strengths</h2>
+            <div className="card card-sm libra-card">
+              <h2 className="card-header libra">Strengths</h2>
               <p>
                 {sign.strengths.slice().split(',').map((substring, idx) => {
                   return (
@@ -154,8 +158,8 @@ const General = () => {
               </p>
             </div>
 
-            <div className="card card-sm gemini-card">
-              <h2 className="card-header gemini">Weaknesses</h2>
+            <div className="card card-sm libra-card">
+              <h2 className="card-header libra">Weaknesses</h2>
               <p>
                 {sign.weaknesses.split(',').map((substring, idx) => {
                   return (
@@ -200,8 +204,8 @@ const About = () => {
 
   return (
     <div className="card-s">
-      <div className="card gemini-card">
-        <h2 className="card-header gemini gemini-card-detail">About {sign.name}</h2>
+      <div className="card libra-card">
+        <h2 className="card-header libra libra-card-detail">About {sign.name}</h2>
         <p>{sign.about}</p>
       </div>
     </div>
@@ -288,8 +292,8 @@ const Health = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name } Health</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name } Health</h2>
           <p>{sign.health}</p>
         </div>
       </div>
@@ -316,8 +320,8 @@ const Love = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name } in Love</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name } in Love</h2>
           <p>{sign.love}</p>
         </div>
       </div>
@@ -344,8 +348,8 @@ const Relationships = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name} Relationships</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name} Relationships</h2>
           <p>{sign.relationship}</p>
         </div>
       </div>
@@ -372,8 +376,8 @@ const Nature = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name} Nature</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name} Nature</h2>
           <p>{sign.nature}</p>
         </div>
       </div>
@@ -400,8 +404,8 @@ const Men = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name } Men</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name } Men</h2>
           <p>{sign.man}</p>
         </div>
       </div>
@@ -428,8 +432,8 @@ const Women = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card gemini-card">
-          <h2 className="card-header gemini gemini-card-detail">{sign.name } Women</h2>
+        <div className="card libra-card">
+          <h2 className="card-header libra libra-card-detail">{sign.name } Women</h2>
           <p>{sign.woman}</p>
         </div>
       </div>
@@ -444,12 +448,12 @@ const Women = () => {
 const Tabs = ({config}) => {
   const [activeTab, setActiveTab] = React.useState(0)
   return (
-    <div className="tab gemini" style={{margin: '0 auto', textAlign: 'center'}}>
-      <div className="tab-headers gemini">
+    <div className="tab libra" style={{margin: '0 auto', textAlign: 'center'}}>
+      <div className="tab-headers libra">
         {
           config.map((entry,index)=>(
             <div
-              className={`tab-header gemini ${activeTab === index ? "active" : ""} `}
+              className={`tab-header libra ${activeTab === index ? "active" : ""} `}
               onClick={()=>setActiveTab(index)}
             >
               {entry.header}
@@ -457,7 +461,7 @@ const Tabs = ({config}) => {
           ))
         }
       </div>
-      <div className="tab-body gemini">
+      <div className="tab-body libra">
         {config[activeTab].component}
       </div>
     </div>
