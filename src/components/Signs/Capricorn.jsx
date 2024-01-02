@@ -45,7 +45,7 @@ const Capricorn = () => {
 
 
   return (
-    <div className="main--s aries">
+    <div className="main--s capricorn">
       <div className="main--s2">
         <div className="main-content">
             <div className="main-header">
@@ -54,36 +54,40 @@ const Capricorn = () => {
               </p>
               <h2 className="zodiac-name aries">{sign.name}</h2> */}
               {/* <p className="zodiac-date aries">{sign.date_range}</p> */}
-              <div className="zodiac-type-container virgo">
+              <div className="zodiac-type-container capricorn">
             
-                <TbZodiacCapricorn className="aries-symbol" size={20} />
-                <div className="zodiac-type aries" style={{backgroundColor: '#FC1503', cursor:'default'}}>
-                  <span className="zodiac-type-text aries" style={{color: '#fff'}}>
+                <TbZodiacCapricorn className="capricorn-symbol" size={20} />
+                <div className="zodiac-type capricorn" 
+                // style={{backgroundColor: '#FC1503', cursor:'default'}}
+                >
+                  <span className="zodiac-type-text capricorn" 
+                  // style={{color: '#fff'}}
+                  >
                     {sign.name}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type capricorn">
                   <GiGoat size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text capricorn">
                     {sign.symbol}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type capricorn">
                   <FaEarthAmericas size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text capricorn">
                     {sign.element}
                   </span>
                 </div>
 
-                <div className="zodiac-planet aries">
+                <div className="zodiac-planet capricorn">
                   <img className="zodiac-planet-size" src={images.saturn}/>
-                  <span className="zodiac-planet-text aries">      
+                  <span className="zodiac-planet-text capricorn">      
                     {sign.ruling_planet}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type capricorn">
                   <MdDateRange size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text capricorn">
                     {sign.date_range}
                   </span>
                 </div>
@@ -145,8 +149,8 @@ const General = () => {
                 })}
               </p>
             </div> */}
-            <div className="card card-sm aries-card">
-              <h2 className="card-header aries">Strengths</h2>
+            <div className="card card-sm capricorn-card">
+              <h2 className="card-header capricorn">Strengths</h2>
               <p>
                 {sign.strengths.split(',').map((substring, idx) => {
                   return (
@@ -159,8 +163,8 @@ const General = () => {
               </p>
             </div>
 
-            <div className="card card-sm aries-card">
-              <h2 className="card-header aries">Weaknesses</h2>
+            <div className="card card-sm capricorn-card">
+              <h2 className="card-header capricorn">Weaknesses</h2>
               <p>
                 {sign.weaknesses.split(',').map((substring, idx) => {
                   return (
@@ -205,8 +209,8 @@ const About = () => {
 
   return (
     <div className="card-s">
-      <div className="card aries-card">
-        <h2 className="card-header aries aries-card-detail">About {sign.name}</h2>
+      <div className="card capricorn-card">
+        <h2 className="card-header capricorn capricorn-card-detail">About {sign.name}</h2>
         <p>{sign.about}</p>
       </div>
     </div>
@@ -293,8 +297,8 @@ const Health = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Health</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name } Health</h2>
           <p>{sign.health}</p>
         </div>
       </div>
@@ -321,8 +325,8 @@ const Love = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } in Love</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name } in Love</h2>
           <p>{sign.love}</p>
         </div>
       </div>
@@ -349,8 +353,8 @@ const Relationships = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name} Relationships</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name} Relationships</h2>
           <p>{sign.relationship}</p>
         </div>
       </div>
@@ -377,8 +381,8 @@ const Nature = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name} Nature</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name} Nature</h2>
           <p>{sign.nature}</p>
         </div>
       </div>
@@ -405,8 +409,8 @@ const Men = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Men</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name } Men</h2>
           <p>{sign.man}</p>
         </div>
       </div>
@@ -433,8 +437,8 @@ const Women = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Women</h2>
+        <div className="card capricorn-card">
+          <h2 className="card-header capricorn capricorn-card-detail">{sign.name } Women</h2>
           <p>{sign.woman}</p>
         </div>
       </div>
@@ -449,12 +453,12 @@ const Women = () => {
 const Tabs = ({config}) => {
   const [activeTab, setActiveTab] = React.useState(0)
   return (
-    <div className="tab aries" style={{margin: '0 auto', textAlign: 'center'}}>
-      <div className="tab-headers aries">
+    <div className="tab capricorn" style={{margin: '0 auto', textAlign: 'center'}}>
+      <div className="tab-headers capricorn">
         {
           config.map((entry,index)=>(
             <div
-              className={`tab-header aries ${activeTab === index ? "active" : ""} `}
+              className={`tab-header capricorn ${activeTab === index ? "active" : ""} `}
               onClick={()=>setActiveTab(index)}
             >
               {entry.header}
@@ -462,7 +466,7 @@ const Tabs = ({config}) => {
           ))
         }
       </div>
-      <div className="tab-body aries">
+      <div className="tab-body capricorn">
         {config[activeTab].component}
       </div>
     </div>
