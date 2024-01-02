@@ -216,6 +216,24 @@
     color: #fff;
 }
 
+.virgo-symbol {
+    border-radius: 50%;
+    border: 2px solid #353424;
+    padding: 10px;
+    /* background-color: #EDDD96;
+    color: #847017; */
+    background-color: #848259;
+    color: #fff;
+}
+.virgo-symbol.virgo-symbol-sm {
+    background-color: #d0cfba;
+    color: #848259;
+} 
+.virgo-symbol.virgo:hover {
+    background-color: #353424;
+    color: #fff;
+}
+
 
 /* Zodiac Name */
 .zodiac-name {
@@ -240,7 +258,11 @@
 
 .zodiac-name.leo {
     color: #847017;
-}v
+}
+
+.zodiac-name.virgo {
+    color: #353424;
+}
 
 
 /* Zodiac Date Range */
@@ -267,6 +289,10 @@
 
 .zodiac-date.leo {
     color: #847017;
+}
+
+.zodiac-date.virgo {
+    color: #353424;
 }
 
 /* Zodiac Type */
@@ -382,6 +408,20 @@
     color: #fff;
 }
 
+
+.zodiac-type.virgo {
+    color: #353424;
+    border: 2px solid #353424;
+    background-color: #d0cfba;
+}
+.zodiac-type.virgo:hover {
+    cursor: pointer;
+    background-color: #353424;
+    border: 2px solid #353424;
+    color: #fff;
+}
+
+
 .zodiac-type-text {
     padding-left: 6px;
     font-weight: 800;
@@ -409,6 +449,10 @@
     color: #847017;
 }
 
+.zodiac-type-text.virgo {
+    color: #353424;
+}
+
 
 .zodiac-type.aries:hover .zodiac-type-text.aries {
     color: #fff;
@@ -421,6 +465,14 @@
 }
 
 .zodiac-type.cancer:hover .zodiac-type-text.cancer {
+    color: #fff;
+}
+
+.zodiac-type.leo:hover .zodiac-type-text.leo {
+    color: #fff;
+}
+
+.zodiac-type.virgo:hover .zodiac-type-text.virgo {
     color: #fff;
 }
 
@@ -506,6 +558,19 @@
     color: #fff;
 }
 
+.zodiac-planet.virgo {
+    color: #353424;
+    border: 2px solid #353424;
+    background-color: #d0cfba;
+}
+
+.zodiac-planet.virgo:hover {
+    cursor: pointer;
+    background-color: #353424;
+    border: 2px solid #353424;
+    color: #fff;
+}
+
 .zodiac-planet-text {
     padding-left: 6px;
     font-weight: 800;
@@ -529,6 +594,10 @@
 
 .zodiac-planet-text.leo {
     color: #847017;
+}
+
+.zodiac-planet-text.virgo {
+    color: #353424;
 }
 
 .zodiac-planet.aries:hover .zodiac-planet-text.aries {
@@ -580,6 +649,9 @@
 .tab .tab-headers.leo {
     border-bottom: 2px solid #847017;
 }
+.tab .tab-headers.virgo {
+    border-bottom: 2px solid #353424;
+}
 
 
 
@@ -608,6 +680,9 @@
 
 .tab .tab-headers .tab-header.leo {
     color: #847017;
+}
+.tab .tab-headers .tab-header.virgo {
+    color: #353424;
 }
 .tab .tab-headers .tab-header:before {
     content: "";
@@ -670,6 +745,10 @@
     text-align: center;
 }
 
+.virgo-card-detail {
+    position: relative;
+    text-align: center;
+}
 
 .aries-card-detail:before {
     content: "";
@@ -737,6 +816,17 @@
     background: #EDDD96;
 }
 
+.virgo-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #848259;
+}
+
 
 
 .cards-s .card .card-header.aries:before {
@@ -759,6 +849,9 @@
     background: #EDDD96;
 }
 
+.cards-s .card .card-header.virgo:before {
+    background: #848259;
+}
 
 .tab .tab-headers .tab-header.aries:before {
     background: #7e0a02;
@@ -778,6 +871,9 @@
     background: #847017;
 }
 
+.tab .tab-headers .tab-header.virgo:before {
+    background: #353424;
+}
 
 
 
@@ -833,6 +929,15 @@
     border-radius: 10px 10px 0px 0px;
 }
 
+.tab .tab-headers .tab-header.virgo.active {
+    color: #353424;
+    border: 2px solid #353424;
+    box-shadow: 0px 2px 0px #d0cfba;
+    border-bottom: 2px solid #d0cfba;
+    background-color: #d0cfba;
+    border-radius: 10px 10px 0px 0px;
+}
+
 
 
 
@@ -855,7 +960,9 @@
 .tab .tab-headers .tab-header.leo.active::before {
     background: #847017;
 }
-
+.tab .tab-headers .tab-header.virgo.active::before {
+    background: #353424;
+}
 
 .tab .tab-body {
     padding: 30px 20px;
@@ -884,6 +991,10 @@
 .tab .tab-body.leo {
     border-bottom: 2px solid #847017;
     background-color: #fcfaef;
+}
+.tab .tab-body.virgo {
+    border-bottom: 2px solid #353424;
+    background-color: #d0cfba;
 }
 
 
@@ -975,6 +1086,12 @@
     max-width: 600px;
     margin: 30px auto;
 }
+.virgo-card {
+    color: #353424; 
+    border: 2px solid #353424;
+    max-width: 600px;
+    margin: 30px auto;
+}
 
 .tab .tab-body > h2 {
     color: #7e0a02;
@@ -1000,7 +1117,9 @@
 .tab .tab-body.leo > h2 {
     color: #847017;
 }
-
+.tab .tab-body.virgo > h2 {
+    color: #353424;
+}
 
 .tab .tab-body > p {
     color: #7e0a02;
@@ -1031,6 +1150,10 @@
 
 .tab .tab-body.leo > p {
     color: #847017;
+}
+
+.tab .tab-body.viro > p {
+    color: #353424;
 }
 
 
@@ -1106,6 +1229,11 @@
     color: #847017;
 }
 
+.question-mark.virgo {
+    background-color: #d0cfba;
+    color: #353424;
+}
+
 .compatibility-p {
     font-size: 16.5px;
     font-weight: 600;
@@ -1130,4 +1258,8 @@
 
 .compatibility-p.leo {
     color: #847017; 
+}
+
+.compatibility-p.virgo {
+    color: #353424; 
 }
