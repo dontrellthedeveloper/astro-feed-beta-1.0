@@ -42,7 +42,7 @@ const Pisces = () => {
 
 
   return (
-    <div className="main--s aries">
+    <div className="main--s pisces">
       <div className="main--s2">
         <div className="main-content">
             <div className="main-header">
@@ -53,34 +53,38 @@ const Pisces = () => {
               {/* <p className="zodiac-date aries">{sign.date_range}</p> */}
               <div className="zodiac-type-container pisces">
             
-                <TbZodiacPisces className="aries-symbol" size={20} />
-                <div className="zodiac-type aries" style={{backgroundColor: '#FC1503', cursor:'default'}}>
-                  <span className="zodiac-type-text aries" style={{color: '#fff'}}>
+                <TbZodiacPisces className="pisces-symbol" size={20} />
+                <div className="zodiac-type pisces" 
+                // style={{backgroundColor: '#FC1503', cursor:'default'}}
+                >
+                  <span className="zodiac-type-text pisces" 
+                  // style={{color: '#fff'}}
+                  >
                     {sign.name}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type pisces">
                   <IoFish size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text pisces">
                     {sign.symbol}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type pisces">
                   <IoIosWater size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text pisces">
                     {sign.element}
                   </span>
                 </div>
 
-                <div className="zodiac-planet aries">
+                <div className="zodiac-planet pisces">
                   <img className="zodiac-planet-size" src={images.jupiter}/>
-                  <span className="zodiac-planet-text aries">      
+                  <span className="zodiac-planet-text pisces">      
                     {sign.ruling_planet}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
+                <div className="zodiac-type pisces">
                   <MdDateRange size={25} />
-                  <span className="zodiac-type-text aries">
+                  <span className="zodiac-type-text pisces">
                     {sign.date_range}
                   </span>
                 </div>
@@ -142,8 +146,8 @@ const General = () => {
                 })}
               </p>
             </div> */}
-            <div className="card card-sm aries-card">
-              <h2 className="card-header aries">Strengths</h2>
+            <div className="card card-sm pisces-card">
+              <h2 className="card-header pisces">Strengths</h2>
               <p>
                 {sign.strengths.split(',').map((substring, idx) => {
                   return (
@@ -156,8 +160,8 @@ const General = () => {
               </p>
             </div>
 
-            <div className="card card-sm aries-card">
-              <h2 className="card-header aries">Weaknesses</h2>
+            <div className="card card-sm pisces-card">
+              <h2 className="card-header pisces">Weaknesses</h2>
               <p>
                 {sign.weaknesses.split(',').map((substring, idx) => {
                   return (
@@ -202,8 +206,8 @@ const About = () => {
 
   return (
     <div className="card-s">
-      <div className="card aries-card">
-        <h2 className="card-header aries aries-card-detail">About {sign.name}</h2>
+      <div className="card pisces-card">
+        <h2 className="card-header pisces pisces-card-detail">About {sign.name}</h2>
         <p>{sign.about}</p>
       </div>
     </div>
@@ -290,8 +294,8 @@ const Health = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Health</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name } Health</h2>
           <p>{sign.health}</p>
         </div>
       </div>
@@ -318,8 +322,8 @@ const Love = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } in Love</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name } in Love</h2>
           <p>{sign.love}</p>
         </div>
       </div>
@@ -346,8 +350,8 @@ const Relationships = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name} Relationships</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name} Relationships</h2>
           <p>{sign.relationship}</p>
         </div>
       </div>
@@ -374,8 +378,8 @@ const Nature = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name} Nature</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name} Nature</h2>
           <p>{sign.nature}</p>
         </div>
       </div>
@@ -402,8 +406,8 @@ const Men = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Men</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name } Men</h2>
           <p>{sign.man}</p>
         </div>
       </div>
@@ -430,8 +434,8 @@ const Women = () => {
   return (
     <>
       <div className="card-s">
-        <div className="card aries-card">
-          <h2 className="card-header aries aries-card-detail">{sign.name } Women</h2>
+        <div className="card pisces-card">
+          <h2 className="card-header pisces pisces-card-detail">{sign.name } Women</h2>
           <p>{sign.woman}</p>
         </div>
       </div>
@@ -446,12 +450,12 @@ const Women = () => {
 const Tabs = ({config}) => {
   const [activeTab, setActiveTab] = React.useState(0)
   return (
-    <div className="tab aries" style={{margin: '0 auto', textAlign: 'center'}}>
-      <div className="tab-headers aries">
+    <div className="tab pisces" style={{margin: '0 auto', textAlign: 'center'}}>
+      <div className="tab-headers pisces">
         {
           config.map((entry,index)=>(
             <div
-              className={`tab-header aries ${activeTab === index ? "active" : ""} `}
+              className={`tab-header pisces ${activeTab === index ? "active" : ""} `}
               onClick={()=>setActiveTab(index)}
             >
               {entry.header}
@@ -459,7 +463,7 @@ const Tabs = ({config}) => {
           ))
         }
       </div>
-      <div className="tab-body aries">
+      <div className="tab-body pisces">
         {config[activeTab].component}
       </div>
     </div>

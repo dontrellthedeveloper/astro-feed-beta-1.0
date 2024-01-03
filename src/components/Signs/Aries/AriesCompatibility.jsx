@@ -171,10 +171,10 @@ export function AriesCompatibility() {
                         <div className='comp-sign'>
                             <Link to={`/aries/virgo`}>
                                 <TbZodiacVirgo 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select virgo-symbol virgo-symbol-sm virgo" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Virgo</p>
+                                <p className='compatibility-p virgo'>Virgo</p>
                             </Link>
                         </div>
                         <div className='comp-sign'>

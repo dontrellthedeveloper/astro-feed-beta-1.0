@@ -174,7 +174,7 @@
 } 
 .gemini-symbol.gemini:hover {
     background-color: #896702;
-    color: #efd27c;
+    color: #fff;
 }
 
 
@@ -194,7 +194,7 @@
 } 
 .cancer-symbol.cancer:hover {
     background-color: #5c5954;
-    color: #DDDCDA;
+    color: #fff;
 }
 
 
@@ -227,10 +227,10 @@
 }
 .virgo-symbol.virgo-symbol-sm {
     background-color: #e8e7dc;
-    color: #848259;
+    color: #353424;
 } 
 .virgo-symbol.virgo:hover {
-    background-color: #353424;
+    background-color: #848259;
     color: #fff;
 }
 
@@ -303,6 +303,49 @@
 }
 
 
+.aquarius-symbol {
+    border-radius: 50%;
+    border: 2px solid #091665;
+    padding: 10px;
+    background-color: #4A62EF;
+    color: #fff;
+}
+.aquarius-symbol.aquarius-symbol-sm {
+    background-color: #edeffd;
+    color: #4A62EF;
+} 
+.aquarius-symbol.aquarius:hover {
+    background-color: #091665;
+    color: #fff;
+}
+
+.pisces-symbol {
+    border-radius: 50%;
+    border: 2px solid #45541e;
+    padding: 10px;
+    background-color: #B6CF79;
+    color: #fff;
+}
+.pisces-symbol.pisces-symbol-sm {
+    background-color: #f8faf2;
+    color: #B6CF79;
+} 
+.pisces-symbol.pisces:hover {
+    background-color: #45541e;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* Zodiac Name */
 .zodiac-name {
     text-align: center;
@@ -345,6 +388,13 @@
 .zodiac-name.capricorn {
     color: #312c28;
 }
+.zodiac-name.aquarius {
+    color: #091665;
+}
+.zodiac-name.pisces {
+    color: #45541e;
+}
+
 
 /* Zodiac Date Range */
 .zodiac-date {
@@ -388,6 +438,12 @@
 }
 .zodiac-date.capricorn {
     color: #312c28;
+}
+.zodiac-date.aquarius {
+    color: #091665;
+}
+.zodiac-date.pisces {
+    color: #45541e;
 }
 
 /* Zodiac Type */
@@ -564,6 +620,32 @@
     color: #fff;
 }
 
+.zodiac-type.aquarius {
+    color: #4A62EF;
+    border: 2px solid #091665;
+    background-color: #edeffd;
+}
+.zodiac-type.aquarius:hover {
+    cursor: pointer;
+    background-color: #091665;
+    border: 2px solid #091665;
+    color: #fff;
+}
+
+.zodiac-type.pisces {
+    color: #B6CF79;
+    border: 2px solid #45541e;
+    background-color: #f8faf2;
+}
+.zodiac-type.pisces:hover {
+    cursor: pointer;
+    background-color: #45541e;
+    border: 2px solid #45541e;
+    color: #fff;
+}
+
+
+
 
 
 
@@ -612,6 +694,16 @@
 .zodiac-type-text.capricorn {
     color: #312c28;
 }
+.zodiac-type-text.aquarius {
+    color: #091665;
+}
+.zodiac-type-text.pisces {
+    color: #45541e;
+}
+
+
+
+
 
 
 
@@ -650,6 +742,13 @@
 .zodiac-type.capricorn:hover .zodiac-type-text.capricorn {
     color: #fff;
 }
+.zodiac-type.aquarius:hover .zodiac-type-text.aquarius {
+    color: #fff;
+}
+.zodiac-type.pisces:hover .zodiac-type-text.pisces {
+    color: #fff;
+}
+
 
 /* Zodiac Planet */
 .zodiac-planet-size {
@@ -811,8 +910,31 @@
     color: #fff;
 }
 
+.zodiac-planet.aquarius {
+    color: #4A62EF;
+    border: 2px solid #091665;
+    background-color: #edeffd;
+}
 
+.zodiac-planet.aquarius:hover {
+    cursor: pointer;
+    background-color: #091665;
+    border: 2px solid #091665;
+    color: #fff;
+}
 
+.zodiac-planet.pisces {
+    color: #B6CF79;
+    border: 2px solid #45541e;
+    background-color: #f8faf2;
+}
+
+.zodiac-planet.pisces:hover {
+    cursor: pointer;
+    background-color: #45541e;
+    border: 2px solid #45541e;
+    color: #fff;
+}
 
 
 
@@ -860,8 +982,12 @@
 .zodiac-planet-text.capricorn {
     color: #312c28;
 }
-
-
+.zodiac-planet-text.aquarius {
+    color: #091665;
+}
+.zodiac-planet-text.pisces {
+    color: #45541e;
+}
 
 
 .zodiac-planet.aries:hover .zodiac-planet-text.aries {
@@ -894,6 +1020,13 @@
 .zodiac-planet.capricorn:hover .zodiac-planet-text.capricorn {
     color: #fff;
 }
+.zodiac-planet.aquarius:hover .zodiac-planet-text.aquarius {
+    color: #fff;
+}
+.zodiac-planet.pisces:hover .zodiac-planet-text.pisces {
+    color: #fff;
+}
+
 
 
 /* Tabs */
@@ -942,6 +1075,14 @@
 .tab .tab-headers.capricorn {
     border-bottom: 2px solid #312c28;
 }
+.tab .tab-headers.aquarius {
+    border-bottom: 2px solid #091665;
+}
+.tab .tab-headers.pisces {
+    border-bottom: 2px solid #45541e;
+}
+
+
 
 
 
@@ -986,6 +1127,13 @@
 .tab .tab-headers .tab-header.capricorn {
     color: #312c28;
 }
+.tab .tab-headers .tab-header.aquarius {
+    color: #091665;
+}
+.tab .tab-headers .tab-header.pisces {
+    color: #45541e;
+}
+
 
 
 
@@ -1071,7 +1219,10 @@
     position: relative;
     text-align: center;
 }
-
+.aquarius-card-detail {
+    position: relative;
+    text-align: center;
+}
 
 .aries-card-detail:before {
     content: "";
@@ -1180,7 +1331,26 @@
     border-radius: 10px;
     background: #7A6E64;
 }
-
+.aquarius-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #4A62EF;
+}
+.pisces-card-detail:before {
+    content: "";
+    position: absolute;
+    bottom: -22px;
+    left: 48%;
+    width: 25px;
+    height: 4px;
+    border-radius: 10px;
+    background: #B6CF79;
+}
 
 
 
@@ -1222,6 +1392,13 @@
 .cards-s .card .card-header.capricorn:before {
     background: #7A6E64;
 }
+.cards-s .card .card-header.aquarius:before {
+    background: #4A62EF;
+}
+.cards-s .card .card-header.pisces:before {
+    background: #B6CF79;
+}
+
 
 
 .tab .tab-headers .tab-header.aries:before {
@@ -1257,6 +1434,15 @@
 .tab .tab-headers .tab-header.capricorn:before {
     background: #312c28;
 }
+.tab .tab-headers .tab-header.aquarius:before {
+    background: #091665;
+}
+.tab .tab-headers .tab-header.pisces:before {
+    background: #45541e;
+}
+
+
+
 
 /* .tab .tab-headers .tab-header.active {
     border-bottom: none;
@@ -1350,6 +1536,24 @@
     background-color: #f2f0ef;
     border-radius: 10px 10px 0px 0px;
 }
+.tab .tab-headers .tab-header.aquarius.active {
+    color: #091665;
+    border: 2px solid #091665;
+    box-shadow: 0px 2px 0px #091665;
+    border-bottom: 2px solid #edeffd;
+    background-color: #edeffd;
+    border-radius: 10px 10px 0px 0px;
+}
+.tab .tab-headers .tab-header.pisces.active {
+    color: #45541e;
+    border: 2px solid #45541e;
+    box-shadow: 0px 2px 0px #45541e;
+    border-bottom: 2px solid #f8faf2;
+    background-color: #f8faf2;
+    border-radius: 10px 10px 0px 0px;
+}
+
+
 
 
 
@@ -1388,6 +1592,15 @@
 .tab .tab-headers .tab-header.capricorn.active::before {
     background: #312c28;
 }
+.tab .tab-headers .tab-header.aquarius.active::before {
+    background: #091665;
+}
+.tab .tab-headers .tab-header.pisces.active::before {
+    background: #45541e;
+}
+
+
+
 
 .tab .tab-body {
     padding: 30px 20px;
@@ -1437,6 +1650,16 @@
     border-bottom: 2px solid #312c28;
     background-color: #f2f0ef;
 }
+.tab .tab-body.aquarius {
+    border-bottom: 2px solid #091665;
+    background-color: #edeffd;
+}
+.tab .tab-body.pisces {
+    border-bottom: 2px solid #45541e;
+    background-color: #f8faf2;
+}
+
+
 
 
 
@@ -1558,6 +1781,18 @@
     max-width: 600px;
     margin: 30px auto;
 }
+.aquarius-card {
+    color: #091665; 
+    border: 2px solid #091665;
+    max-width: 600px;
+    margin: 30px auto;
+}
+.pisces-card {
+    color: #45541e; 
+    border: 2px solid #45541e;
+    max-width: 600px;
+    margin: 30px auto;
+}
 
 
 
@@ -1600,8 +1835,12 @@
 .tab .tab-body.capricorn > h2 {
     color: #312c28;
 }
-
-
+.tab .tab-body.aquarius > h2 {
+    color: #091665;
+}
+.tab .tab-body.pisces > h2 {
+    color: #45541e;
+}
 
 .tab .tab-body > p {
     color: #7e0a02;
@@ -1649,7 +1888,12 @@
 .tab .tab-body.capricorn > p {
     color: #312c28;
 }
-
+.tab .tab-body.aquarius > p {
+    color: #091665;
+}
+.tab .tab-body.pisces > p {
+    color: #45541e;
+}
 
 /* Compatibility */
 
@@ -1744,6 +1988,17 @@
     background-color: #f2f0ef;
     color: #312c28;
 }
+.question-mark.aquarius {
+    background-color: #edeffd;
+    color: #091665;
+}
+.question-mark.pisces {
+    background-color: #f8faf2;
+    color: #45541e;
+}
+
+
+
 
 
 
@@ -1791,5 +2046,10 @@
 .compatibility-p.capricorn {
     color: #312c28; 
 }
+.compatibility-p.aquarius {
+    color: #091665; 
+}
 
-
+.compatibility-p.pisces {
+    color: #45541e; 
+}
