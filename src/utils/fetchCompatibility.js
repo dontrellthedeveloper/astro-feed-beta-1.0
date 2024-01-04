@@ -23,6 +23,13 @@ export const fetchAriesCompatability = async (url) => {
     return data;
 };
 
+export const fetchCompSign = async (url) => {
+    const { data } = await axios.get(`${BASE_URL}/${url}`, options);
+    // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);
+    console.log(data)
+    return data;
+};
+
 export const fetchTaurusCompatability = async (url) => {
     const { data } = await axios.get(`${BASE_URL}/${url}`, options);
     // const { data } = await axios.get(`${BASE_URL2}/${url}`, options2);

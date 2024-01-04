@@ -30,6 +30,9 @@ const App = () => {
 
   // const {id} = useParams();
 
+  const [compHeader, setCompHeader] = useState('');
+  
+
   const [compatibility, setCompatibility] = useState('');
 
   // useEffect(() => {
@@ -42,7 +45,7 @@ const App = () => {
 return (
   <BrowserRouter>
       <Box sx={{ backgroundColor: '#000' }}>
-        <AstroContext.Provider value={{sign, setSign, compatibility, setCompatibility}}>
+        <AstroContext.Provider value={{sign, setSign, compatibility, setCompatibility, compHeader, setCompHeader}}>
           <Navbar />
           <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
             <Box sx={{ 

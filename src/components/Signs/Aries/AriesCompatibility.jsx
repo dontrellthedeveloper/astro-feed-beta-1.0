@@ -1,7 +1,7 @@
-import React, { useEffect, useState, useContext } from 'react';
+import React, { useEffect, useState, useContext, useLayoutEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useParams } from "react-router-dom";
-import { fetchAriesCompatability } from '../../../utils/fetchCompatibility';
+import { fetchAriesCompatability, fetchCompSign } from '../../../utils/fetchCompatibility';
 import { 
     TbZodiacAquarius, 
     TbZodiacAries, 
@@ -25,6 +25,7 @@ import { IoIosWater } from 'react-icons/io';
 
 import { AstroContext } from "../../../context/AstroContext";
 import { AriesCompInfo } from './AriesCompInfo';
+import { fetchAries } from '../../../utils/fetchFromAPI';
 
 
 export function AriesCompatibility() {
@@ -34,39 +35,58 @@ export function AriesCompatibility() {
     // console.log(compatabilityId.id)
     // console.log(id)
 
-    const { compatibility,setCompatibility} = useContext(AstroContext);
+    const { compatibility,setCompatibility, compHeader, setCompHeader} = useContext(AstroContext);
 
+    // const {id} = useParams();
     const {id} = useParams();
+    
+    const zodiacSign = id;
+    console.log(zodiacSign)
+    // console.log(zodiacSign)
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     // console.log(id)
 
     useEffect(() => {
+        setCompHeader(id)
         fetchAriesCompatability(`affinity?sign1=aries&sign2=${id}`)
-          .then((data) => setSign(data))
-          console.log(compatibility)
+          .then((data) => setCompatibility(data))
+        //   console.log(compatibility)
     }, [id]);
 
-    const zodiacComp = sign;
+    useLayoutEffect(() => {
+        fetchCompSign(`sign?s=${id}`)
+          .then((data) => setCompHeader(data))
+          console.log(sign)
+        }, [id]);
 
-    const love = zodiacComp[0];
-    const planets = zodiacComp[1];
-    const elements = zodiacComp[2];
-    const mod = zodiacComp[3];
-    const best = zodiacComp[4]
+    console.log(compHeader)
+
+    const zodiacComp = compatibility;
+
+    // const love = zodiacComp[0];
+    // const planets = zodiacComp[1];
+    // const elements = zodiacComp[2];
+    // const mod = zodiacComp[3];
+    // const best = zodiacComp[4]
 
 
 
-    console.log(love)
+    // console.log(love)
 
-    const zodiacSign = id;
-    // console.log(zodiacSign)
+
 
     // if(!love || !planets || !elements || !mod || !best) return (
     //     <div className="preloader">
     //         <div className="status"></div>
     //     </div>
     // )  
+
+    if(!compHeader) return (
+        <div className="preloader">
+            <div className="status"></div>
+        </div>
+    )  
 
     return (
         <>
@@ -133,7 +153,7 @@ export function AriesCompatibility() {
 
 
                     <div className='compatibility-first-row'>
-                        <div className='comp-sign'>
+                        <div className='comp-sign' >
                             <Link to={`/aries/aries`}>
                                 <TbZodiacAries 
                                     className="compatibility-select aries-symbol aries-symbol-sm aries" 
@@ -256,7 +276,7 @@ export function AriesCompatibility() {
             </div>
 
 
-           <AriesCompInfo sign={sign} setSign={setSign} id={id} />                 
+           {/* <AriesCompInfo sign={sign} setSign={setSign} id={id} />                  */}
 
 
 

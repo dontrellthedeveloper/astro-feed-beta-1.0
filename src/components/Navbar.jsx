@@ -7,7 +7,7 @@ import { logo } from "../utils/constants";
 import { SearchBar } from "./";
 
 import { AstroContext } from "../context/AstroContext";
-import { TbZodiacAries } from "react-icons/tb";
+import { TbZodiacAquarius, TbZodiacAries, TbZodiacCancer, TbZodiacCapricorn, TbZodiacGemini, TbZodiacLeo, TbZodiacLibra, TbZodiacPisces, TbZodiacSagittarius, TbZodiacScorpio, TbZodiacTaurus, TbZodiacVirgo } from "react-icons/tb";
 import { GiRam } from "react-icons/gi";
 import { FaFireAlt } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
@@ -16,7 +16,16 @@ import {images} from '../constants';
 
 const Navbar = () => { 
   
-  const { sign } = useContext(AstroContext);
+  const { sign, compHeader} = useContext(AstroContext);
+
+  // console.log(compHeader.name)
+
+
+  if(!compHeader) return (
+    <div className="preloader">
+        <div className="status"></div>
+    </div>
+)  
   
   return (
     
@@ -73,7 +82,36 @@ const Navbar = () => {
                     {sign.date_range}
                   </span>
                 </div>
+                {compHeader &&
+                  (compHeader.name === 'Aries') 
+                  ? <TbZodiacAries className="aries-symbol" size={20} /> :
+                  (compHeader.name === 'Taurus') 
+                  ? <TbZodiacTaurus className="taurus-symbol" size={20} /> :
+                  (compHeader.name === 'Gemini') 
+                  ? <TbZodiacGemini className="gemini-symbol" size={20} /> :
+                  (compHeader.name === 'Cancer') 
+                  ? <TbZodiacCancer className="cancer-symbol" size={20} /> :
+                  (compHeader.name === 'Leo') 
+                  ? <TbZodiacLeo className="leo-symbol" size={20} /> :
+                  (compHeader.name === 'Virgo') 
+                  ? <TbZodiacVirgo className="virgo-symbol" size={20} /> :
+                  (compHeader.name === 'Libra') 
+                  ? <TbZodiacLibra className="libra-symbol" size={20} /> :
+                  (compHeader.name === 'Scorpio') 
+                  ? <TbZodiacScorpio className="scorpio-symbol" size={20} /> :
+                  (compHeader.name === 'Sagittarius') 
+                  ? <TbZodiacSagittarius className="sagittarius-symbol" size={20} /> :
+                  (compHeader.name === 'Capricorn') 
+                  ? <TbZodiacCapricorn className="capricorn-symbol" size={20} /> :
+                  (compHeader.name === 'Aquarius') 
+                  ? <TbZodiacAquarius className="aquarius-symbol" size={20} /> :
+                  (compHeader.name === 'Pisces') 
+                  ? <TbZodiacPisces className="pisces-symbol" size={20} /> :
+                  "" 
+                }
 
+
+                {/* <TbZodiacAries className="aries-symbol" size={20} /> */}
 
               </div>  
             </div>
