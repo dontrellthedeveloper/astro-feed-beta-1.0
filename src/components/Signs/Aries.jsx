@@ -151,7 +151,32 @@ const Compatibility = () => {
 
   return (
     <>
-          <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
+
+          <AriesCompatibility/>
+    </>
+  )
+}
+
+
+const General = () => {
+  const [sign, setSign] = useState('');
+  const [selectedCategory, setSelectedCategory] = useState("");
+  useEffect(() => {
+
+      fetchAries()
+        .then((data) => setSign(data))
+        console.log(sign)
+      }, [selectedCategory]);
+
+      if(!sign) return (
+        <div className="preloader">
+            <div className="status">...</div>
+        </div>
+      )  
+
+  return (
+    <>
+              <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
             <div className="card card-sm aries-card">
               <h2 className="card-header aries">Strengths</h2>
               <p>
@@ -179,34 +204,7 @@ const Compatibility = () => {
                 })}
               </p>
             </div>
-
-
-
           </div>
-          <AriesCompatibility/>
-    </>
-  )
-}
-
-
-const General = () => {
-  const [sign, setSign] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState("");
-  useEffect(() => {
-
-      fetchAries()
-        .then((data) => setSign(data))
-        console.log(sign)
-      }, [selectedCategory]);
-
-      if(!sign) return (
-        <div className="preloader">
-            <div className="status">...</div>
-        </div>
-      )  
-
-  return (
-    <>
         <div className="cards-s" style={{display: 'flex', justifyContent:'space-evenly', textAlign: 'center'}}>
             <div className="card card-sm aries-card">
               <h2 className="card-header aries">Strengths</h2>

@@ -112,7 +112,7 @@
     background-color: #290300;
 
     
-    /* border-bottom: 2px solid #000; */
+    border-bottom: 2px solid #000;
 }
 
 
@@ -1270,6 +1270,10 @@
     height: 4px;
     border-radius: 10px;
     background: #FC1503;
+}
+
+.aries-card-detail.header:before {
+    left: 42%;
 }
 
 .taurus-card-detail:before {

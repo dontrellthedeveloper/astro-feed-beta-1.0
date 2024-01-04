@@ -21,9 +21,16 @@ import AriesComp from "./components/Signs/Aries/AriesComp";
 import { fetchAries } from "./utils/fetchFromAPI";
 import {AstroContext} from './context/AstroContext';
 
+// import { useParams } from "react-router-dom";
+// import { fetchAriesCompatability } from './utils/fetchCompatibility';
+
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState(null);
   const [sign, setSign] = useState('');
+
+  // const {id} = useParams();
+
+  const [compatibility, setCompatibility] = useState('');
 
   // useEffect(() => {
 
@@ -35,7 +42,7 @@ const App = () => {
 return (
   <BrowserRouter>
       <Box sx={{ backgroundColor: '#000' }}>
-        <AstroContext.Provider value={{sign, setSign}}>
+        <AstroContext.Provider value={{sign, setSign, compatibility, setCompatibility}}>
           <Navbar />
           <Stack sx={{ flexDirection: { sx: "column", md: "row" } }}>
             <Box sx={{ 
