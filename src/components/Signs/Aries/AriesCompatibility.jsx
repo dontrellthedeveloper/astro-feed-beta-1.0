@@ -18,8 +18,10 @@ import {
 } from 'react-icons/tb';
 import { HiPlusSm } from 'react-icons/hi';
 import { MdOutlineQuestionMark } from "react-icons/md";
-import { FaDAndD, FaFireAlt } from "react-icons/fa";
+import { FaDAndD, FaFireAlt, FaWind } from "react-icons/fa";
 import {images} from '../../../constants';
+import { FaEarthAmericas } from 'react-icons/fa6';
+import { IoIosWater } from 'react-icons/io';
 
 
 export function AriesCompatibility() {
@@ -180,19 +182,19 @@ export function AriesCompatibility() {
                         <div className='comp-sign'>
                             <Link to={`/aries/libra`}>
                                 <TbZodiacLibra 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select libra-symbol libra-symbol-sm libra" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Libra</p>
+                                <p className='compatibility-p libra'>Libra</p>
                             </Link>
                         </div>
                         <div className='comp-sign'>
                             <Link to={`/aries/scorpio`}>
                                 <TbZodiacScorpio 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select scorpio-symbol scorpio-symbol-sm scorpio" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Scorpio</p>
+                                <p className='compatibility-p scorpio'>Scorpio</p>
                             </Link>
                         </div>
                     </div>
@@ -203,37 +205,37 @@ export function AriesCompatibility() {
                         <div className='comp-sign'>
                             <Link to={`/aries/sagittarius`}>
                                 <TbZodiacSagittarius 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select sagittarius-symbol sagittarius-symbol-sm sagittarius" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Sagittarius</p>
+                                <p className='compatibility-p sagittarius'>Sagittarius</p>
                             </Link>
                         </div>
                         <div className='comp-sign'>
                             <Link to={`/aries/capricorn`}>
                                 <TbZodiacCapricorn 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select capricorn-symbol capricorn-symbol-sm capricorn" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Capricorn</p>
+                                <p className='compatibility-p capricorn'>Capricorn</p>
                             </Link>
                         </div>
                         <div className='comp-sign'>
                             <Link to={`/aries/aquarius`}>
                                 <TbZodiacAquarius 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select aquarius-symbol aquarius-symbol-sm aquarius" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Aquarius</p>
+                                <p className='compatibility-p aquarius'>Aquarius</p>
                             </Link>
                         </div>
                         <div className='comp-sign'>
                             <Link to={`/aries/pisces`}>
                                 <TbZodiacPisces 
-                                    className="compatibility-select aries-symbol aries" 
+                                    className="compatibility-select pisces-symbol pisces-symbol-sm pisces" 
                                     size={30} 
                                 />
-                                <p className='compatibility-p aries'>Pisces</p>
+                                <p className='compatibility-p pisces'>Pisces</p>
                             </Link>
                         </div>
                     </div>
@@ -300,6 +302,112 @@ export function AriesCompatibility() {
                     <p className='comp-text aries'>{love.text}</p>
                 </div>
             </div>
+
+            <div className="card-s">
+                <div className="card aries-card">
+                <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
+                {/* Elements -  */}
+                Fire & 
+                
+                {
+                            (zodiacSign === 'aries') 
+                            ? 
+                            ' Fire ' : 
+                            (zodiacSign === 'taurus') 
+                            ? 
+                            ' Earth ' : 
+                            (zodiacSign === 'gemini') 
+                            ? 
+                            ' Air ' : 
+                            (zodiacSign === 'cancer') 
+                            ? 
+                            ' Water ' : 
+                            (zodiacSign === 'leo') 
+                            ? 
+                            ' Fire ' : 
+                            (zodiacSign === 'virgo') 
+                            ? 
+                            ' Earth ' : 
+                            (zodiacSign === 'libra') 
+                            ? 
+                            ' Air ' : 
+                            (zodiacSign === 'scorpio') 
+                            ? 
+                            ' Water ' : 
+                            (zodiacSign === 'sagittarius') 
+                            ? 
+                            ' Fire ' : 
+                            (zodiacSign === 'capricorn') 
+                            ? 
+                            ' Earth ' : 
+                            (zodiacSign === 'aquarius') 
+                            ? 
+                            ' Air ' : 
+                            (zodiacSign === 'pisces') 
+                            ? 
+                            ' Water ' : 
+                            ""
+                            } 
+                
+                </h2>
+                <div className='compatibility-main detail'>
+                        <div className="">
+                            <FaFireAlt className="aries-symbol" size={40} />
+
+                            {/* <p>Mars</p> */}
+                        </div> 
+                        <div>
+                            <HiPlusSm size={30} />
+                            
+                        </div>
+                        <div>
+                            {
+                                (zodiacSign === 'aries') ?
+                                <FaFireAlt className="aries-symbol" size={40} />
+                                :
+                                (zodiacSign === 'taurus') ?
+                                <FaEarthAmericas className="taurus-symbol" size={40} /> :
+                                (zodiacSign === 'gemini') ?
+                                <FaWind className="gemini-symbol" size={40} /> :
+                                (zodiacSign === 'cancer') ?
+                                <IoIosWater className="cancer-symbol" size={40} /> :
+                                (zodiacSign === 'leo') ?
+                                <FaFireAlt className="leo-symbol" size={40} /> :
+                                (zodiacSign === 'virgo') ?
+                                <FaEarthAmericas className="virgo-symbol" size={40} /> :
+                                (zodiacSign === 'libra') ?
+                                <FaWind className="libra-symbol" size={40} /> :
+                                (zodiacSign === 'scorpio') ?
+                                <IoIosWater className="scorpio-symbol" size={40} /> :
+                                (zodiacSign === 'sagittarius') ?
+                                <FaFireAlt className="sagittarius-symbol" size={40} /> :
+                                (zodiacSign === 'capricorn') ?
+                                <FaEarthAmericas className="capricorn-symbol" size={40} /> :
+                                (zodiacSign === 'aquarius') ?
+                                <FaWind className="aquarius-symbol" size={40} /> :
+                                (zodiacSign === 'pisces') ?
+                                <IoIosWater className="pisces-symbol" size={40} /> :
+                                <MdOutlineQuestionMark 
+                                className="aries-symbol question-mark aries" 
+                                size={40} 
+                                /> 
+
+                            }
+                            
+                            {/* {
+                                (zodiacSign === 'aries') ?
+                                <p className='compatibility-p aries'>Mars</p> :
+                                <p className='compatibility-p aries'></p>
+                                
+                            } */}
+                        </div>
+                    </div>
+                            
+                    {/* <h3>{love.header}</h3> */}
+                    <p className='comp-text aries'>{elements.text}</p>
+                </div>
+            </div>
+
 
             <div className="card-s">
                 <div className="card aries-card">
@@ -481,73 +589,11 @@ export function AriesCompatibility() {
                 </div>
             </div>
 
-            <div className="card-s">
-                <div className="card aries-card">
-                <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
-                {/* Elements -  */}
-                Fire & {(zodiacSign === 'aries') ? 'Fire':''} </h2>
-                <div className='compatibility-main detail'>
-                        <div className="">
-                            <FaFireAlt className="aries-symbol" size={40} />
-
-                            {/* <p>Mars</p> */}
-                        </div> 
-                        <div>
-                            <HiPlusSm size={30} />
-                            
-                        </div>
-                        <div>
-                            {
-                                (zodiacSign === 'aries') ?
-                                <FaFireAlt className="aries-symbol" size={40} />
-                                :
-                                (zodiacSign === 'taurus') ?
-                                <TbZodiacTaurus className="taurus-symbol" size={40} /> :
-                                (zodiacSign === 'gemini') ?
-                                <TbZodiacGemini className="gemini-symbol" size={40} /> :
-                                (zodiacSign === 'cancer') ?
-                                <TbZodiacCancer className="cancer-symbol" size={40} /> :
-                                (zodiacSign === 'leo') ?
-                                <TbZodiacLeo className="leo-symbol" size={40} /> :
-                                (zodiacSign === 'virgo') ?
-                                <TbZodiacVirgo className="virgo-symbol" size={40} /> :
-                                (zodiacSign === 'libra') ?
-                                <TbZodiacLibra className="libra-symbol" size={40} /> :
-                                (zodiacSign === 'scorpio') ?
-                                <TbZodiacScorpio className="scorpio-symbol" size={40} /> :
-                                (zodiacSign === 'sagittarius') ?
-                                <TbZodiacSagittarius className="sagittarius-symbol" size={40} /> :
-                                (zodiacSign === 'capricorn') ?
-                                <TbZodiacCapricorn className="capricorn-symbol" size={40} /> :
-                                (zodiacSign === 'aquarius') ?
-                                <TbZodiacAquarius className="aquarius-symbol" size={40} /> :
-                                (zodiacSign === 'pisces') ?
-                                <TbZodiacPisces className="pisces-symbol" size={40} /> :
-                                <MdOutlineQuestionMark 
-                                className="aries-symbol question-mark aries" 
-                                size={40} 
-                                /> 
-
-                            }
-                            
-                            {/* {
-                                (zodiacSign === 'aries') ?
-                                <p className='compatibility-p aries'>Mars</p> :
-                                <p className='compatibility-p aries'></p>
-                                
-                            } */}
-                        </div>
-                    </div>
-                            
-                    {/* <h3>{love.header}</h3> */}
-                    <p className='comp-text aries'>{elements.text}</p>
-                </div>
-            </div>
 
             <div className="card-s">
                 <div className="card aries-card">
                     <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>
-                    Modalities - Cardinal & {(
+                    Cardinal & {(
                         zodiacSign === 'aries' ? 'cardinal':  
                         zodiacSign === 'taurus' ? 'fixed': 
                         zodiacSign === 'gemini' ? 'mutable': 
@@ -563,7 +609,7 @@ export function AriesCompatibility() {
                         ''
                         )} 
                     </h2>
-                <div className='compatibility-main'>
+                <div className='compatibility-main detail'>
                         <div className="">
                             <img className="zodiac-planet-size planet-size-comp" src={images.cardinal}/>
                             <span className="zodiac-planet-text aries">      
@@ -688,7 +734,7 @@ export function AriesCompatibility() {
             <div className="card-s">
                 <div className="card aries-card">
                 <h2 className="card-header aries aries-card-detail" style={{textTransform: 'capitalize'}}>Best Aspect of Aries & {zodiacSign} </h2>
-                <div className='compatibility-main'>
+                <div className='compatibility-main detail'>
                         <div className="">
                         <div>
                             <TbZodiacAries className="aries-symbol" size={40} />

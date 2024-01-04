@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useContext } from "react";
 import { Box, Stack, Typography } from "@mui/material";
 import { Sidebar, Videos } from "./../";
 import { render } from 'react-dom';
@@ -23,21 +23,37 @@ import {AriesCompatibility} from "./Aries/AriesCompatibility";
 
 import { HiPlusSm } from "react-icons/hi";
 
+import { AstroContext } from "../../context/AstroContext";
+
 
 const Aries = () => {
   
+    const { sign,setSign} = useContext(AstroContext);
 
     const params = useParams();
     const [videos, setVideos] = useState(null);
-    const [sign, setSign] = useState('');
+    // const [sign, setSign] = useState('');
     const [selectedCategory, setSelectedCategory] = useState("");
+    
+    
+    
     useEffect(() => {
-
     fetchAries()
       .then((data) => setSign(data))
       console.log(sign)
     }, [selectedCategory]);
 
+    
+
+    // useEffect(() => {
+
+    //   fetchAries()
+    //     .then((data) => setAries(data))
+    //     console.log(aries)
+    //   }, []);
+    
+    
+    
     if(!sign) return (
       <div className="preloader">
           <div className="status">...</div>
@@ -46,25 +62,19 @@ const Aries = () => {
 
 
 
+
+
+
   return (
     <div className="main--s aries">
       <div className="main--s2">
         <div className="main-content">
-            <div className="main-header">
-              {/* <p className="header-symbol-container">
-                <TbZodiacAries className="aries-symbol" size={40} />
-              </p>
-              <h2 className="zodiac-name aries">{sign.name}</h2> */}
-              {/* <p className="zodiac-date aries">{sign.date_range}</p> */}
+            {/* <div className="main-header">
               <div className="zodiac-type-container aries">
             
                 <TbZodiacAries className="aries-symbol" size={20} />
-                <div className="zodiac-type aries" 
-                // style={{backgroundColor: '#FC1503', cursor:'default'}}
-                >
-                  <span className="zodiac-type-text aries" 
-                  // style={{color: '#fff'}}
-                  >
+                <div className="zodiac-type aries">
+                  <span className="zodiac-type-text aries" >
                     {sign.name}
                   </span>
                 </div>
@@ -96,7 +106,7 @@ const Aries = () => {
 
 
               </div>  
-            </div>
+            </div> */}
             <Tabs
               config={[
                 {header: "Compatilibility", component: <Compatibility/>},
@@ -105,8 +115,8 @@ const Aries = () => {
                 {header: "Women", component: <Women/>},
                 {header: "Men", component: <Men/>},
                 {header: "Love", component: <Love/>}, 
-                {header: "Relationships", component: <Relationships/>},
-                {header: "Career", component: <Career/>},
+                // {header: "Relationships", component: <Relationships/>},
+                // {header: "Career", component: <Career/>},
                 // {header: "Nature", component: <Nature/>},
                 // {header: "Health", component: <Health/>},
               ]}
