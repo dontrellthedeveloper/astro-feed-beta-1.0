@@ -8,15 +8,45 @@ import { SearchBar } from "./";
 
 import { AstroContext } from "../context/AstroContext";
 import { TbZodiacAquarius, TbZodiacAries, TbZodiacCancer, TbZodiacCapricorn, TbZodiacGemini, TbZodiacLeo, TbZodiacLibra, TbZodiacPisces, TbZodiacSagittarius, TbZodiacScorpio, TbZodiacTaurus, TbZodiacVirgo } from "react-icons/tb";
-import { GiRam } from "react-icons/gi";
-import { FaFireAlt } from "react-icons/fa";
+import { GiLion, GiRam } from "react-icons/gi";
+import { FaFireAlt, FaWind } from "react-icons/fa";
 import { MdDateRange } from "react-icons/md";
 import {images} from '../constants';
+import { HiPlusSm } from "react-icons/hi";
+
+
+
+
+
 
 
 const Navbar = () => { 
   
   const { sign, compHeader} = useContext(AstroContext);
+
+  const aries = '#290300';
+  const compBg = 
+  (compHeader.name === 'Aries') ? '#290300' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Gemini') ? '#322601' :
+  (compHeader.name === 'Cancer') ? '#3c3a36' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Leo') ? '#342b06' :
+  (compHeader.name === 'Aquarius') ? '#060f44' :
+                  ''
+
+  const gradient = {
+    // ariesLeo:  `linear-gradient(to right, ${aries}, ${compBg})`,
+    // ariesTaurus:  `linear-gradient(to right, ${aries}, ${compBg})`,
+    aries: `linear-gradient(to right, ${aries}, ${compBg})`
+  }
+
+
 
   // console.log(compHeader.name)
 
@@ -40,18 +70,24 @@ const Navbar = () => {
     justifyContent: "space-between" 
     }}
   >
-    <div style={{backgroundColor: '#290300', height: '80px', width: '256px'}}>
+    <div style={{backgroundColor: '#290300', height: '70px', width: '256px'}}>
       <Link to="/" style={{ display: "flex", alignItems: "center" }}>
         {/* <img src={logo} alt="logo" height={45} /> */}
       </Link>
     </div>
     {/* <SearchBar /> */}
 
-    <div className="main-header">
+    <div className="main-header" style={{
+      background: 
+        compHeader.name === 'Aries'|| 'Taurus' || 'Gemini' || 'Cancer' || 'Leo'|| 'Virgo' || 'Libra' || 'Scorpio' || 'Sagittarius' || 'Capricorn' || 'Aquarius' || 'Pisces' ? gradient.aries : 
+        '#290300'
+      }}>
 
-              <div className="zodiac-type-container aries">
-            
-                <TbZodiacAries className="aries-symbol" size={20} />
+              <div className="zodiac-type-container aries" style={{maxWidth: '1100px'}}>
+              <TbZodiacAries className="aries-symbol" size={20} />
+              <div style={{display: 'flex', backgroundColor: ''}}>
+
+
                 <div className="zodiac-type aries" >
                   <span className="zodiac-type-text aries" >
                     {sign.name}
@@ -63,6 +99,10 @@ const Navbar = () => {
                     {sign.symbol}
                   </span>
                 </div>
+
+
+
+
                 <div className="zodiac-type aries">
                   <FaFireAlt size={25} />
                   <span className="zodiac-type-text aries">
@@ -76,12 +116,56 @@ const Navbar = () => {
                     {sign.ruling_planet}
                   </span>
                 </div>
-                <div className="zodiac-type aries">
-                  <MdDateRange size={25} />
-                  <span className="zodiac-type-text aries">
-                    {sign.date_range}
-                  </span>
+              
+                  <div className={!compHeader ? 'zodiac-type aries':'zodiac-type aries none'}>
+                    <MdDateRange size={25} />
+                    <span className="zodiac-type-text aries">
+                      {sign.date_range}
+                    </span>
+                  </div>
+
                 </div>
+
+                <HiPlusSm style={{color: '#fff', backgroundColor: ''}} size={30} />
+
+
+
+                <div style={{display: 'flex', backgroundColor: ''}}>
+
+                <div className="zodiac-planet aquarius">
+                    <img className="zodiac-planet-size" src={images.uranus}/>
+                    <span className="zodiac-planet-text aquarius">      
+                      {compHeader.ruling_planet}
+                    </span>
+                  </div>
+
+
+                  <div className="zodiac-type aquarius">
+                    <FaWind size={25} />
+                    <span className="zodiac-type-text aquarius">
+                      {compHeader.element}
+                    </span>
+                  </div>
+
+
+
+
+                  <div className="zodiac-type aquarius">
+                    <GiLion size={25} />
+                    <span className="zodiac-type-text aquarius">
+                      {compHeader.symbol}
+                    </span>
+                  </div>
+
+                  <div className="zodiac-type aquarius" >
+                    <span className="zodiac-type-text aquarius" >
+                      {compHeader.name}
+                    </span>
+                  </div>
+                </div>
+
+               
+
                 {compHeader &&
                   (compHeader.name === 'Aries') 
                   ? <TbZodiacAries className="aries-symbol" size={20} /> :
