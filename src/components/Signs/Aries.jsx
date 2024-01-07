@@ -28,13 +28,41 @@ import { AstroContext } from "../../context/AstroContext";
 
 const Aries = () => {
   
-    const { sign,setSign} = useContext(AstroContext);
+    const { sign,setSign, compHeader} = useContext(AstroContext);
+
+    console.log(compHeader)
 
     const params = useParams();
     const [videos, setVideos] = useState(null);
     // const [sign, setSign] = useState('');
     const [selectedCategory, setSelectedCategory] = useState("");
+
+
+
+
+
+    const aries = '#29030066';
+    const compBg = 
+    (compHeader.name === 'Aries') ? '#29030066' :
+    (compHeader.name === 'Taurus') ? '#21401566' :
+    (compHeader.name === 'Gemini') ? '#32260166' :
+    (compHeader.name === 'Cancer') ? '#3c3a3666' :
+    (compHeader.name === 'Leo') ? '#342b0666' :
+    (compHeader.name === 'Virgo') ? '#27261a66' :
+    (compHeader.name === 'Libra') ? '#161b4166' :
+    (compHeader.name === 'Scorpio') ? '#00000066' :
+    (compHeader.name === 'Sagittarius') ? '#30192d66' :
+    (compHeader.name === 'Capricorn') ? '#2a252266' :
+    (compHeader.name === 'Aquarius') ? '#060f4466' :
+    (compHeader.name === 'Pisces') ? '#2a331366' :
+    ""
+
+    const gradient = {
+      aries: `linear-gradient(to right, ${aries}, ${compBg})`
+    }
+
     
+
     
     
     useEffect(() => {
@@ -61,13 +89,20 @@ const Aries = () => {
     )  
 
 
-
+    if(!compHeader) return (
+      <div className="preloader">
+          <div className="status"></div>
+      </div>
+  )  
 
 
 
   return (
     <div className="main--s aries">
-      <div className="main--s2">
+      <div className="main--s2" 
+      style={{background: compHeader.name === 'Aries'|| 'Taurus' || 'Gemini' || 'Cancer' || 'Leo'|| 'Virgo' || 'Libra' || 'Scorpio' || 'Sagittarius' || 'Capricorn' || 'Aquarius' || 'Pisces' ? gradient.aries : 
+        '#290300'}}
+        >
         <div className="main-content">
             {/* <div className="main-header">
               <div className="zodiac-type-container aries">

@@ -198,7 +198,9 @@ const Navbar = () => {
                       <img className="zodiac-planet-size" src={images.saturn}/>
                     </div>
                     :
-                    ""
+                    <div className="zodiac-planet aries" style={{minWidth: '26px', backgroundColor: 'transparent', border: '2px solid transparent'}}>
+                      {/* <img className="zodiac-planet-size" src={images.mars}/> */}
+                    </div>
                   }
 
                     
@@ -264,7 +266,9 @@ const Navbar = () => {
                       <IoIosWater size={25} />
                     </div>
                     :
-                    ""
+                    <div className="zodiac-type aries" style={{backgroundColor: 'transparent', border: '2px solid transparent', color: 'transparent'}}>
+                      <FaFireAlt size={25} />
+                    </div>
                   }
 
 
@@ -293,7 +297,7 @@ const Navbar = () => {
                     </div>
                     :
                     (compHeader.name === 'Leo') ?
-                    <div className="zodiac-type Leo">
+                    <div className="zodiac-type leo">
                       <GiLion size={25} />
                     </div>
                     :
@@ -332,7 +336,9 @@ const Navbar = () => {
                       <IoFish size={25} />
                     </div>
                     :
-                    ""
+                    <div className="zodiac-type aries" style={{backgroundColor: 'transparent', border: '2px solid transparent', color: 'transparent'}}>
+                      <GiRam size={25} />
+                    </div>
                   }
 
 
@@ -422,7 +428,11 @@ const Navbar = () => {
                       </span>
                     </div>
                     :
-                    ""
+                    <div className="zodiac-type aries" style={{backgroundColor: 'transparent', border: '2px solid transparent', color: 'transparent'}}>
+                      <span className="zodiac-type-text aries" style={{backgroundColor: 'transparent', border: '2px solid transparent', color: 'transparent'}}>
+                        Aries
+                      </span>
+                    </div>
                   }
 
 
@@ -457,7 +467,7 @@ const Navbar = () => {
                   ? <TbZodiacAquarius className="aquarius-symbol" size={20} /> :
                   (compHeader.name === 'Pisces') 
                   ? <TbZodiacPisces className="pisces-symbol" size={20} /> :
-                  "" 
+                  <TbZodiacAries className="aries-symbol" style={{backgroundColor: 'transparent', border: '2px solid transparent', color: 'transparent'}} size={20} /> 
                 }
 
 

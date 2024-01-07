@@ -1669,6 +1669,7 @@
 .tab .tab-body.aries {
     border-bottom: 2px solid #7e0a02;
     background-color: #fff3f2;
+    background: linear-gradient(to right, #2c0300, #060f44);
 }
 
 .tab .tab-body.taurus {
