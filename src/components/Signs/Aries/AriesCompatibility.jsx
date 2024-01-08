@@ -42,7 +42,6 @@ export function AriesCompatibility() {
     
     const zodiacSign = id;
     console.log(zodiacSign)
-    // console.log(zodiacSign)
     const [selectedCategory, setSelectedCategory] = useState(null);
 
     // console.log(id)
@@ -276,7 +275,7 @@ export function AriesCompatibility() {
             </div>
 
 
-           {/* <AriesCompInfo sign={sign} setSign={setSign} id={id} />                  */}
+           <AriesCompInfo sign={sign} setSign={setSign} id={id} />                 
 
 
 

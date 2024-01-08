@@ -58,10 +58,11 @@ const Aries = () => {
     (compHeader.name === 'Pisces') ? '#2a331366' :
     ""
 
+   
     const gradient = {
-      aries: `linear-gradient(to right, ${aries}, ${compBg})`
+      aries:  `linear-gradient(to right, ${aries}, ${compBg})`
     }
-
+  
     
 
     
@@ -187,7 +188,6 @@ const Compatibility = () => {
 
   return (
     <>
-
           <AriesCompatibility/>
     </>
   )
@@ -541,6 +541,33 @@ const Women = () => {
 
 
 const Tabs = ({config}) => {
+
+  const { compHeader} = useContext(AstroContext);
+
+  const aries = '#290300';
+
+  const compBg = 
+  (compHeader.name === 'Aries') ? '#290300' :
+  (compHeader.name === 'Taurus') ? '#214015' :
+  (compHeader.name === 'Gemini') ? '#322601' :
+  (compHeader.name === 'Cancer') ? '#3c3a36' :
+  (compHeader.name === 'Leo') ? '#342b06' :
+  (compHeader.name === 'Virgo') ? '#27261a' :
+  (compHeader.name === 'Libra') ? '#161b41' :
+  (compHeader.name === 'Scorpio') ? '#000000' :
+  (compHeader.name === 'Sagittarius') ? '#30192d' :
+  (compHeader.name === 'Capricorn') ? '#2a2522' :
+  (compHeader.name === 'Aquarius') ? '#060f44' :
+  (compHeader.name === 'Pisces') ? '#2a3313' :
+  ""
+
+  const gradient = {
+    aries:  `linear-gradient(to right, ${aries}, ${compBg})`
+  }
+
+
+
+
   const [activeTab, setActiveTab] = React.useState(0)
   return (
     <div className="tab aries" style={{margin: '0 auto', textAlign: 'center'}}>
@@ -556,7 +583,10 @@ const Tabs = ({config}) => {
           ))
         }
       </div>
-      <div className="tab-body aries">
+      <div className="tab-body aries" 
+      style={{background: compHeader.name === 'Aries'|| 'Taurus' || 'Gemini' || 'Cancer' || 'Leo'|| 'Virgo' || 'Libra' || 'Scorpio' || 'Sagittarius' || 'Capricorn' || 'Aquarius' || 'Pisces' ? gradient.aries : 
+        '#290300'}}
+      >
         {config[activeTab].component}
       </div>
     </div>
