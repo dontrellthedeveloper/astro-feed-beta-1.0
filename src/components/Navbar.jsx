@@ -54,11 +54,11 @@ const Navbar = () => {
   // console.log(compHeader.name)
 
 
-  if(!compHeader) return (
-    <div className="preloader">
-        <div className="status"></div>
-    </div>
-)  
+//   if(!compHeader) return (
+//     <div className="preloader">
+//         <div className="status"></div>
+//     </div>
+// )  
   
   return (
     
@@ -84,8 +84,8 @@ const Navbar = () => {
       background: 
         compHeader.name === 'Aries'|| 'Taurus' || 'Gemini' || 'Cancer' || 'Leo'|| 'Virgo' || 'Libra' || 'Scorpio' || 'Sagittarius' || 'Capricorn' || 'Aquarius' || 'Pisces' ? gradient.aries : 
         '#290300'
-      }}>
-
+     }}>
+        <div className="inner-header">
               <div className="zodiac-type-container aries" style={{maxWidth: '800px'}}>
               <TbZodiacAries className="aries-symbol" size={20} />
               <div style={{display: 'flex', backgroundColor: ''}}>
@@ -474,7 +474,8 @@ const Navbar = () => {
                 {/* <TbZodiacAries className="aries-symbol" size={20} /> */}
 
               </div>  
-            </div>
+           </div>
+      </div>
   </Stack>
 )};
 

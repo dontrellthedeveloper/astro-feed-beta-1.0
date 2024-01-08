@@ -36,6 +36,7 @@ const Aries = () => {
     const [videos, setVideos] = useState(null);
     // const [sign, setSign] = useState('');
     const [selectedCategory, setSelectedCategory] = useState("");
+    console.log(sign)
 
 
 
@@ -89,11 +90,11 @@ const Aries = () => {
     )  
 
 
-    if(!compHeader) return (
-      <div className="preloader">
-          <div className="status"></div>
-      </div>
-  )  
+  //   if(!compHeader) return (
+  //     <div className="preloader">
+  //         <div className="status"></div>
+  //     </div>
+  // )  
 
 
 

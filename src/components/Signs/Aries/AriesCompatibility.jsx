@@ -54,7 +54,7 @@ export function AriesCompatibility() {
         //   console.log(compatibility)
     }, [id]);
 
-    useLayoutEffect(() => {
+    useEffect(() => {
         fetchCompSign(`sign?s=${id}`)
           .then((data) => setCompHeader(data))
           console.log(sign)
@@ -82,11 +82,11 @@ export function AriesCompatibility() {
     //     </div>
     // )  
 
-    if(!compHeader) return (
-        <div className="preloader">
-            <div className="status"></div>
-        </div>
-    )  
+    // if(!compHeader) return (
+    //     <div className="preloader">
+    //         <div className="status"></div>
+    //     </div>
+    // )  
 
     return (
         <>
