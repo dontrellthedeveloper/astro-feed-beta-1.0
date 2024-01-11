@@ -272,10 +272,7 @@ export function AriesCompatibility() {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div>
-                
-            </div>                        
+            </div>                      
 
            <AriesCompInfo sign={sign} setSign={setSign} id={id} />                 
 
