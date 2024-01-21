@@ -19,7 +19,7 @@ import {
 import { HiPlusSm } from 'react-icons/hi';
 import { MdOutlineQuestionMark } from "react-icons/md";
 
-export function LeoCompatibility() {
+export function LibraCompatibility() {
     const {id} = useParams();
     const [sign, setSign] = useState('');
 
